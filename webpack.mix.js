@@ -43,7 +43,7 @@ mix.js(
         }
     )
     .setResourceRoot('assets/') // Necessary for relative images, it adds to the front of image path in src
-    .copyDirectory('images', 'docs/assets/images/') // For some reason, images get moved to the root of output, so now we have to move them.
+    .copyDirectory('src/html/images', 'docs/assets/images/') // For some reason, images get moved to the root of output, so now we have to move them.
     //.copyDirectory('src/html/assets/icons', 'docs/assets/icons/') // For some reason, images get moved to the root of output, so now we have to move them.
     //.tailwind()
 ;
