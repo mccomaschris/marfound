@@ -1,0 +1,44 @@
+
+.muf-event {
+
+	&-section-head {
+		@apply bg-green-light py-10 text-mini-lg flex items-center mt-16 md:mt-24;
+		margin-right: 1rem;
+		padding-left: 1rem;
+
+		h3 {
+			@apply text-mini-lg;
+
+			@screen md {
+				@apply text-xl;
+			}
+		}
+
+		@screen sm {
+	        //max-width: 600px;
+	        padding-left: calc((100vw - 600px)/2 + 1rem);
+	    }
+
+	    @screen smed {
+	        //max-width: 700px;
+	        padding-left: calc((100vw - 700px)/2 + 1rem);
+	    }
+
+	    @screen md {
+	    	@apply text-xl;
+	        //max-width: calc(820px - 12%);
+	        max-width: 87vw;
+	        padding-left: calc((100vw - (820px - 12%))/2 + 1rem);
+	    }
+
+	    @screen mlg {
+	        //max-width: calc(975px - 16%);
+	        padding-left: calc((100vw - (975px - 16%))/2 + 1rem);
+	    }
+
+	    @screen lg {
+	        //max-width: 860px;
+	        padding-left: calc((100vw - 860px)/2 + 1rem);
+	    }
+	}
+}

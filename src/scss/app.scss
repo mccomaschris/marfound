@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@import 'vars.scss';
+
+@import 'header.scss';
+@import 'breadcrumbs.scss';
+@import 'footer.scss';
+@import 'search.scss';
+@import 'navigation.scss';
+@import 'maincontent.scss';
+@import 'grid.scss';
+@import 'hero.scss';
+
+@import 'accordions.scss';
+@import 'buttons.scss';
+@import 'carousel.scss';
+@import 'containers.scss';
+@import 'events.scss';
+@import 'feature.scss';
+@import 'maps.scss';
+@import 'stats.scss';
+@import 'tabs.scss';
+@import 'tables.scss';
+@import 'theme.scss';
+@import 'typography.scss';
+
+  
+@layer base {
+
+    html {
+        @apply leading-relaxed text-base font-serif text-charcoal;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold;
+    }
+
+    h1 {     
+        font-style: normal;
+        font-weight: 375;
+        font-size: 30px;
+        line-height: 36px;
+        overflow-wrap: break-word;
+        hyphens: auto;
+
+        @screen md {
+            font-size: 64px;
+            line-height: 68px;
+            letter-spacing: -0.03em;
+        }
+    }
+
+    h2 { 
+        font-weight: 375;
+        font-size: 26px;
+        line-height: 32px;
+
+        @screen md {
+            font-size: 36px;
+            line-height: 40px;
+        }
+    }
+
+    h3, .like-h3 { 
+        font-size: 20px;
+        line-height: 26px;
+
+        @screen md {
+            font-size: 26px;
+            line-height: 32px;
+        }
+    }
+
+    h4 { // Needs to be Heavy
+        font-size: 18px;
+        line-height: 24px;
+
+        @screen md {
+            font-size: 22px;
+            line-height: 28px;
+        }
+    }
+
+    h5, h6 { // Needs to be Heavy
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    ul:not(.muf-list-reset) {
+        @apply pl-8 mb-6 list-disc;
+
+        ol, ul {
+            @apply mb-0;
+        }
+    }
+
+    ol:not(.muf-list-reset) {
+        @apply pl-8 mb-6 list-decimal;
+
+        ol, ul {
+            @apply mb-0;
+        }
+    }
+
+    // Needed for stats and other items. Feels dirty.
+    sup {
+        vertical-align: sub;
+        font-size: 0.5em;
+        top: -1em;
+    }
+
+    a[href]:not(.muf-link-reset):not(.cc-link) {
+        color: $muf-green;
+        @apply no-underline;
+        @include muf-transition();
+
+        &:hover, &:focus {
+            @apply text-charcoal underline;
+            text-decoration-thickness: 0.125em;
+            text-decoration-color: $muf-green;
+        }
+    }
+
+    a[href].muf-heading-link {
+        @apply font-bold font-sans text-lg;
+        text-decoration-thickness: 0.125em;
+        text-underline-offset: 2px; 
+        @include muf-transition();
+        color: black !important;
+
+        &:hover, &:focus {
+            //color: $muf-gold;
+            @apply underline;
+            //text-decoration-color: $muf-gold;
+            text-decoration-thickness: 0.155em;
+        }
+    }
+
+    p {
+        @apply mb-4;
+    }
+}
+
+@layer components {
+
+    .muf-transition {
+        @include muf-transition();
+    }
+}
+
+@layer utilities {
+
+/*
+    *[class^="group-hover"] {
+        @apply transition-all duration-300;
+    }
+*/
+
+    .muf-dashed-border-t {
+        @apply border-dotted border-t-4;
+        border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .muf-dashed-border-t-dark {
+        @apply border-dotted border-t-4;
+        border-color: rgba(19, 23, 22, 0.1);
+    }
+
+    .muf-dashed-border-b-dark {
+        @apply border-dotted border-b-4;
+        border-color: rgba(19, 23, 22, 0.1);
+    }
+
+    .muf-dashed-border-b-darker { 
+        @apply border-dotted border-b-4;
+        border-color: rgba(19, 23, 22, 0.25);
+    }
+
+    .muf-dashed-border-r-dark {
+        @apply border-dotted border-r-4;
+        border-color: rgba(19, 23, 22, 0.1);
+    }
+
+    .muf-dashed-border-r-darker {
+        @apply border-dotted border-r-4;
+        border-color: rgba(19, 23, 22, 0.25);
+    }
+}

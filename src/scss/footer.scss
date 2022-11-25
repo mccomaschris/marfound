@@ -1,0 +1,25 @@
+
+.muf-footer-logo {
+	max-width: 56px;
+	@apply mx-auto block mb-8;
+
+	@screen md {
+		@apply mx-0 mb-7;
+	}
+}
+
+.muf-footer-links {
+	font-size: 16px;
+	line-height: 19.2px;
+	letter-spacing: 0.02em;
+
+	a[href] {
+		@apply text-white;
+
+		&:hover, &:focus {
+			@apply text-white underline;
+			text-decoration-thickness: 0.125em;
+            text-decoration-color: $muf-green;
+		}
+	}
+}

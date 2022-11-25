@@ -1,0 +1,57 @@
+  
+.muf-accordions {
+	@apply px-4; 
+	counter-reset: steps;
+
+	.muf-accordion-button {
+		@apply flex items-center justify-between w-full font-bold;
+		font-size: 16px;
+		line-height: 24px;
+
+		.muf-accordion-icon {
+			@apply text-gray-300 rotate-45 ;
+			@include muf-transition();
+		}
+	}
+
+	.muf-accordion-header {
+		@apply relative flex items-center; 
+
+		&:before {
+			counter-increment: steps;
+			content: counter(steps);
+			@apply mr-4;
+		}
+	}
+
+	button[aria-expanded="false"] { // The accordion is closed
+		
+
+		&.deco-rule {
+			@apply flex-row items-start;
+		}
+
+		+ *[aria-labelledby] {
+			@apply hidden;
+		}
+	}
+
+	button[aria-expanded="true"] { // The accordion is open
+
+		+ *[aria-labelledby] {
+			@apply block;
+		}
+
+		.muf-accordion-icon {
+			@apply text-charcoal rotate-0;
+		}
+	}
+
+	.muf-accordion-panel {
+		@apply text-sm font-sans pt-2;
+	}
+}
+
+.muf-accordion-item {
+	@apply overflow-hidden py-6 border-gray-200 border-b;  
+}

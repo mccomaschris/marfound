@@ -1,0 +1,67 @@
+
+.muf-stats {
+
+	&-wrapper {
+
+		.flickity-slider {
+			@apply divide-x-4 divide-dotted;
+		}
+	}
+
+	&-metric {
+		@apply text-3xl lg:text-4xl text-green;
+	}
+
+	&-context {
+		@apply text-sm uppercase font-bold;
+		max-width: 275px;
+	}
+}
+
+
+.muf-carousel.muf-alumni-stats-wrapper:not(.flickity-enabled) {
+
+	@screen md {
+
+		@apply grid grid-rows-2;
+		grid-template-columns: repeat(2, auto);
+
+		.muf-carousel-item {
+			@apply px-6 m-0 py-2;
+			max-width: 100%;
+
+			&:first-of-type {
+				@apply border-dotted border-r-4 row-span-2 pr-3 py-0;
+        		border-color: rgba(19, 23, 22, 0.1);
+
+        		.muf-stats-metric--vertical {
+        			@apply -ml-4;
+        			writing-mode: vertical-lr;
+				    text-orientation: mixed;
+				    transform: rotate(180deg);
+        		}
+
+        		.muf-stats-context {
+        			@apply mt-4;
+        			max-width: 145px;
+        		}
+			}
+
+			&:nth-of-type(2) {
+				@apply border-dotted border-b-4;
+        		border-color: rgba(19, 23, 22, 0.1);
+			}
+		}
+	}
+
+	@screen lg {
+
+		.muf-carousel-item {
+			@apply px-16;
+
+			&:first-of-type {
+				@apply pr-8;
+			}
+		}
+	}
+}

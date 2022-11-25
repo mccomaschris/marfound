@@ -1,0 +1,13 @@
+
+#muf-map {
+    width: 100%;
+    height: 300px;
+
+    @screen md {
+    	height: 1000px;
+    }
+}
+
+.muf-tab-panel button {
+	@apply text-left;
+}

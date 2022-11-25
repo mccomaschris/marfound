@@ -1,0 +1,48 @@
+
+.muf-table {
+
+	th, td {
+		@apply py-4 px-6 border-dotted border-b-2 text-left;
+        border-color: rgba(19, 23, 22, 0.1);
+	}
+
+	th {
+		@apply px-6;
+	}
+
+	th {
+		@apply whitespace-nowrap;
+	}
+
+	thead {
+
+		th {
+
+			&:first-of-type {
+				@apply border-r-2;
+			}
+		}
+	}
+
+	tbody {
+
+		th {
+			@apply border-dotted border-r-2 pr-8;
+        	border-color: rgba(19, 23, 22, 0.1);
+		}
+
+		td {
+			
+			&:first-of-type {
+				@apply pl-8;
+			}
+		}
+
+		tr:last-of-type {
+
+			td, th {
+				@apply border-b-0;
+			}
+		}
+	}
+}

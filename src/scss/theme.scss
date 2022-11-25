@@ -1,0 +1,82 @@
+
+.muf-dark {
+
+	.muf-hero-shade {
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 40.71%, rgba(0, 0, 0, 0) 63.75%);
+
+		@screen md {
+			background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 39.93%, rgba(0, 0, 0, 0) 63.33%), url(4778.jpg);
+		}
+	}
+
+	.muf-hero-overlay {
+		@apply text-white;
+	}
+
+	.muf-hero h1 {
+		@apply text-white;
+	}
+}
+
+.muf-no-hero {
+
+	.muf-hero-underlay {
+		@apply hidden;
+	}
+
+	.muf-hero-overlay {
+		@apply pb-0;
+	}
+
+	.muf-hero {
+		min-height: 300px;
+
+		h1 {
+			@apply text-center;
+
+			&:after {
+	            margin: 24px auto;
+	        }
+		}
+
+		.container { // Copy the extra-skinny-container stuff
+			width: 100%;
+		    @apply px-4 mx-auto;
+
+		    @screen sm {
+		        max-width: 600px;
+		    }
+
+		    @screen smed {
+		        max-width: 700px;
+		    }
+
+		    @screen md {
+		        max-width: calc(820px - 12%);
+		    }
+
+		    @screen mlg {
+		        max-width: calc(975px - 16%);
+		    }
+
+		    @screen lg {
+		        max-width: 860px;
+		    }
+		}
+
+		@screen md {
+			min-height: 500px;
+		}
+	}
+
+	#muf-header {
+		filter: drop-shadow(0px 1px 18px rgba(0, 0, 0, 0.1));
+	}
+}
+
+.muf-tall-hero {
+
+	.muf-hero {
+		min-height: 660px;
+	}
+}

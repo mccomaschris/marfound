@@ -1,0 +1,60 @@
+<extends src="main.html" locals='{"bodyClass" : "muf-dark muf-tall-hero"}'>
+    <block name="pagetitle">Supporting First-Generation Students to Rise and Reach Their Dreams</block>
+    <block name="hero">
+        <img src="/docs/assets/images/home.jpg" alt="Marshall Hero Image" class="object-cover h-full w-screen" />
+    </block>
+    <block name="header-extra">
+        <div class="flex flex-wrap items-center w-content gap-4">
+            <a href="#" class="muf-link-reset muf-button">
+                Read More
+            </a>
+            <a href="#" class="muf-link-reset muf-button muf-button--white">
+                Support First-Generation Students
+            </a>
+        </div>
+    </block>
+    <block name="breadcrumbs"></block>
+    <block name="maincontent">
+        <main class="overflow-hidden" id="main">
+            <div class="container">
+                <div class="max-w-4xl">
+                    <h2 class="deco-rule">The Impact of Giving</h2>
+                    <p>Pellentesque posuere. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Curabitur suscipit suscipit tellus. Praesent ac massa at ligula laoreet iaculis.</p>
+
+                    <p>Nullam accumsan lorem in dui. In turpis. Etiam imperdiet imperdiet orci. Quisque id odio. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis.</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="muf-new-section">
+                    <include src="stats.html"></include>
+                </div>
+            </div>
+            
+            <div class="muf-new-section">
+                <include src="news.html"></include>
+            </div>
+
+            <div class="muf-new-section">
+                <div class="extra-skinny-container text-center">
+                    <h2 class="muf-text-center deco-rule">Find Your Herd, Find Your Home</h2>
+                    <p>Pellentesque posuere. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Curabitur suscipit suscipit tellus. Praesent ac massa at ligula laoreet iaculis.</p>
+
+                    <p>Nullam accumsan lorem in dui. In turpis. Etiam imperdiet imperdiet orci. Quisque id odio. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis.</p>
+
+                    <div class="mt-12 flex flex-col sm:flex-row gap-2 items-center justify-center">
+                        <a href="#" class="muf-link-reset muf-button">Find Your Local Chapter</a>
+                        <a href="#" class="muf-link-reset muf-button muf-button--white muf-border-green">Connect with a Society</a>
+                    </div>
+                </div>
+            </div>
+            <div class="muf-new-section">
+                <include src="events.html"></include>
+            </div>
+            <div class="muf-new-section mb-12 md:mb-16 lg:mb-24">
+                <include src="feature.html" locals='{"title" : "Funding Priorities", "subtitle" : "Student Emergency Fund"}'></include>
+            </div>
+        </main>
+        <script></script>
+    </block>
+</extends> 

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" class="h-full">
+    <head>
+        <!-- OU: Start Consistent Head on all pages -->
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <link rel="stylesheet" href="assets/css/app.css">
+
+        <style>
+            @font-face {
+                /* .font-normal */
+                font-family: 'sentinel';
+                src: url('assets/fonts/sentinel-book-webfont.woff2') format('woff2'),
+                     url('assets/fonts/sentinel-book-webfont.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+            @font-face {
+                /* .font-bold */
+                font-family: 'sentinel';
+                src: url('assets/fonts/sentinel-semibold-webfont.woff2') format('woff2'),
+                     url('assets/fonts/sentinel-semibold-webfont.woff') format('woff');
+                font-weight: 700; /* 375 */
+                font-style: normal;
+                font-display: swap;
+            }
+            @font-face {
+                /* .font-black */
+                font-family: 'sentinel';
+                src: url('assets/fonts/sentinel-black-webfont.woff2') format('woff2'),
+                     url('assets/fonts/sentinel-black-webfont.woff') format('woff');
+                font-weight: 900;
+                font-style: normal;
+                font-display: swap;
+            }
+
+
+            @font-face {
+                /* .font-normal */
+                font-family: 'myriad';
+                src: url('assets/fonts/MYRIADPRO-REGULAR.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+            @font-face {
+                /* .font-bold */
+                font-family: 'myriad';
+                src: url('assets/fonts/MYRIADPRO-SEMIBOLD.woff') format('woff');
+                font-weight: 700;
+                font-style: normal;
+                font-display: swap;
+            }
+        </style>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+        <!-- End Consistent Head on all pages -->
+        <title>Page title | Marshall University Foundation</title>
+
+        <!-- Populate the ones you can, remove the others -->
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="msapplication-TileImage" content="">
+        <meta name="theme-color" content="">
+        <link rel="shortcut icon" href="#" type="image/x-icon">
+        <link rel="icon" href="#" type="image/x-icon">
+        <link rel="apple-touch-icon" href="#">
+        <link rel="canonical" href="#">
+
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:type" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <meta property="og:image:width" content="">
+        <meta property="og:image:height" content="">
+        <meta property="og:site_name" content="">
+
+        <meta name="twitter:card" content="">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:updated_time" content="">
+
+        
+    </head>
+    
+    <body class="flex h-full flex-col muf-dark" id="muf-body">
+        <!-- Start Consistent Skip Links on all pages -->
+        <a class="skippy sr-only focus:not-sr-only" href="#main">
+            <span class="skippy-text">Skip to Content</span>
+        </a>
+        <a class="skippy sr-only focus:not-sr-only" href="#muf-navigation">
+            <!-- This will trigger the menu -->
+            <span class="skippy-text">Skip to Navigation</span>
+        </a>
+        <!-- End Consistent Skip Links on all pages -->
+        <header class="relative" id="muf-header">
+            <div class="container">
+                <div class="flex justify-between">
+                    <a href="/" title="Go to Marshall University Foundation Homepage" class="muf-logo-link mr-4">
+                        <img src="assets/images/Logo@2x.png?9f6796c472192f56fa0c0b1186b5d8f3" alt="Marshall University Foundation Logo">
+                    </a>
+                    <button id="muf-menu-trigger-open" class="text-green">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_357_4933)">
+                            <path d="M1.99902 5.5V7.5H21.999V5.5H1.99902ZM-1.00098 11.5V13.5H18.999V11.5H-1.00098ZM1.99902 17.5V19.5H21.999V17.5H1.99902Z" class="fill-current"></path>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_357_4933">
+                            <rect width="24" height="24" fill="white" transform="translate(0 0.5)"></rect>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="sr-only">Open Menu</span>
+                    </button>
+                    <button id="muf-menu-trigger-close" class="text-green">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.29297 5.20703L4.70703 3.79297L12 11.0859L19.293 3.79297L20.707 5.20703L4.70703 21.207L3.29297 19.793L10.5859 12.5L3.29297 5.20703Z" fill="#00AC3E"></path>
+                            <path d="M19.293 21.207L13 14.9141L14.4141 13.5L20.707 19.793L19.293 21.207Z" class="fill-current"></path>
+                        </svg>
+                        <span class="sr-only">Close Menu</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="muf-navigation-wrapper">
+                <div class="container">
+                    <div class="flex gap-8 flex-col">
+                        <div class="muf-search mt-8">
+                            <form>
+                                <label for="muf-search-box" class="sr-only">Search</label>
+                                <div class="relative">
+                                    <input type="text" name="muf-search" id="muf-search-box" class="w-full rounded-full bg-gray-100 border-none text-sm font-sans pl-8" placeholder="Search">
+                                    <button class="muf-search-button">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.99927 2C5.14512 2 1.99927 5.14585 1.99927 9C1.99927 12.8541 5.14512 16 8.99927 16C10.7473 16 12.3443 15.348 13.5735 14.2812L13.9993 14.707V16L19.9993 22L21.9993 20L15.9993 14H14.7063L14.2805 13.5742C15.3473 12.345 15.9993 10.748 15.9993 9C15.9993 5.14585 12.8534 2 8.99927 2ZM8.99927 4C11.7725 4 13.9993 6.22673 13.9993 9C13.9993 11.7733 11.7725 14 8.99927 14C6.226 14 3.99927 11.7733 3.99927 9C3.99927 6.22673 6.226 4 8.99927 4Z" class="fill-current"></path>
+                                        </svg>
+                                        <span class="sr-only">Tap to search</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="muf-primary-nav">
+                            <ul class="muf-list-reset space-y-8">
+                                <li>
+                                    <button class="muf-primary-nav-label muf-accordion-button" aria-expanded="false" aria-controls="primaryNavPanel01" id="primaryNav01">
+                                        We are...
+                                        <span class="">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM18 13H13V18H11V13H6V11H11V6H13V11H18V13Z" class="fill-current"></path>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="muf-primary-nav-list-wrapper" aria-labelledby="primaryNav01" id="primaryNavPanel01">
+                                        <ul class="muf-list-reset muf-primary-nav-list">
+                                            <li>
+                                                <a href="#" class="muf-link-reset">About Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Board of Directors</a>
+                                                <ul class="muf-list-reset muf-primary-nav-sublist">
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Foundation Board</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Alumni Board</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Annual Reporting</a>
+                                                <ul class="muf-list-reset muf-primary-nav-sublist">
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Financial Reports</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Impact Reports</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Additional Reports</a>
+                                                <ul class="muf-list-reset muf-primary-nav-sublist">
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Recognition Societies</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Grants</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Foundation Requisitions</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Foundation Policies</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Naming Guidelines</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Contact Us</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button class="muf-primary-nav-label muf-accordion-button" aria-expanded="false" aria-controls="primaryNavPanel02" id="primaryNav02">
+                                        Stay Connected
+                                        <span class="">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM18 13H13V18H11V13H6V11H11V6H13V11H18V13Z" class="fill-current"></path>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="muf-primary-nav-list-wrapper" aria-labelledby="primaryNav02" id="primaryNavPanel02">
+                                        
+                                        <ul class="muf-list-reset muf-primary-nav-list">
+                                            <li>
+                                                <a href="#" class="muf-link-reset">MU Alumni Association</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Alumni Resources</a>
+                                                <ul class="muf-list-reset muf-primary-nav-sublist">
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Member Benefits</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Career Center</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Request a Transcript</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Alumni Awards</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">License Plates</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Latest News</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Foundation Magazine</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Share Your News</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button class="muf-primary-nav-label muf-accordion-button" aria-expanded="false" aria-controls="primaryNavPanel02" id="primaryNav02">
+                                        Get Involved
+                                        <span class="">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM18 13H13V18H11V13H6V11H11V6H13V11H18V13Z" class="fill-current"></path>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="muf-primary-nav-list-wrapper" aria-labelledby="primaryNav02" id="primaryNavPanel02">
+                                        
+                                        <ul class="muf-list-reset muf-primary-nav-list">
+                                            <li class="break-inside-avoid">
+                                                <a href="#" class="muf-link-reset">Special Events</a>
+                                                <ul class="muf-list-reset muf-primary-nav-sublist">
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Homecoming</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Alumni Awards Banquet</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Memorial Fountain Ceremony</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Scholarship Honor Brunch</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Thank a Donor Days</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">MU Day at the Capitol</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="muf-link-reset">Athletic Events</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="">
+                                                <a href="#" class="muf-link-reset">Alumni Chapters</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Herd Ambassadors</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Crowdfunding</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">University Calendar</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button class="muf-primary-nav-label muf-accordion-button" aria-expanded="false" aria-controls="primaryNavPanel02" id="primaryNav02">
+                                        Give Back
+                                        <span class="">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM18 13H13V18H11V13H6V11H11V6H13V11H18V13Z" class="fill-current"></path>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="muf-primary-nav-list-wrapper" aria-labelledby="primaryNav02" id="primaryNavPanel02">
+                                        
+                                        <ul class="muf-list-reset muf-primary-nav-list">
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Annual Fund</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Major Giving</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Planned Giving</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Scholarships</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="muf-link-reset">Faculty &amp; Staff Giving</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="hidden mlg:block">
+                                    <button class="text-green" id="muf-search-trigger-open">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 2C5.14585 2 2 5.14585 2 9C2 12.8541 5.14585 16 9 16C10.748 16 12.345 15.348 13.5742 14.2812L14 14.707V16L20 22L22 20L16 14H14.707L14.2813 13.5742C15.348 12.345 16 10.748 16 9C16 5.14585 12.8542 2 9 2ZM9 4C11.7733 4 14 6.22673 14 9C14 11.7733 11.7733 14 9 14C6.22673 14 4 11.7733 4 9C4 6.22673 6.22673 4 9 4Z" class="fill-current"></path>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="muf-secondary-nav">
+                            <ul class="muf-list-reset space-y-6 font-sans text-sm mt-6">
+                                <li class="">
+                                    <a href="#" class="muf-link-reset hover:underline">Marshall Rises</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="muf-link-reset hover:underline">Find your Herd</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="muf-link-reset hover:underline">Update your Information</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="muf-link-reset muf-button small-button w-full md:w-auto">
+                                        <span class="button-icon">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.8538 1.66675C9.46134 1.66675 8.33268 2.79541 8.33268 4.18791C8.33268 6.25041 12.916 9.91707 12.916 9.91707C12.916 9.91707 17.4994 6.25041 17.4994 4.18791C17.4994 2.79541 16.3707 1.66675 14.9782 1.66675C13.6515 1.66675 12.916 2.62378 12.916 2.62378C12.916 2.62378 12.1805 1.66675 10.8538 1.66675ZM16.666 10.0001L12.4994 14.1667H9.16602V13.3334H12.4994V10.8334H5.83268L1.66602 15.0001L4.99935 18.3334L6.66602 16.6667H12.6426C13.0842 16.6667 13.5085 16.491 13.821 16.1785L18.3327 11.6667L16.666 10.0001Z" class="fill-current"></path>
+                                            </svg>
+                                        </span>
+                                        Make a Gift
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="muf-maincontent">
+            <div class="muf-hero relative flex">
+                <div class="muf-hero-underlay">
+                    
+        <img src="/docs/assets/images/homecoming.jpg" alt="Marshall Hero Image" class="object-cover h-full w-screen">
+    
+                    <div class="muf-hero-shade">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="muf-hero-overlay absolute w-full bottom-0">
+                    <div class="container">
+                        
+                        <h1 class="deco-rule">
+                            Regular Event Title
+                        </h1>
+                        <div class="muf-hero-actions mt-6">
+                            
+        
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="muf-breadcrumbs">
+                <div class="container mt-6 mb-16">
+                    
+                </div>
+            </div>
+            <div class="">
+                
+        <main class="overflow-hidden mt-16 md:mt-24" id="main">
+            <div class="container">
+                <div class="muf-main-grid grid md:grid-cols-12 gap-6 md:gap-12">
+
+                    <div class="md:col-span-4 lg:col-span-3">
+                        <div>
+                            <div class="bg-charcoal text-white px-6 py-8">
+                                <div class="deco-rule deco-rule--white italic text-white">
+                                    Event Details
+                                </div>
+                                <div class="space-y-6 mb-6">
+                                    <div class="">
+                                        <div class="uppercase text-sm text-gray-300">
+                                            Time
+                                        </div>
+                                        <div class="text-xl text-white">
+                                            7-9 pm
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="uppercase text-sm text-gray-300">
+                                            Date
+                                        </div>
+                                        <div class="text-xl text-white">
+                                            October 3, 2022
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="uppercase text-sm text-gray-300">
+                                            Location
+                                        </div>
+                                        <div class="text-xl text-white">
+                                            Memorial Student Center
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="muf-link-reset muf-button w-full">
+                                    Register
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-8 md:row-span-2 lg:col-span-9">
+                        <h2 class="deco-rule">H2 Subhead Goes Here</h2>
+                        <p>Sed eu tempus purus, ut pulvinar eros. Nulla ut sem vitae ante scelerisque auctor sit amet id arcu. Curabitur mattis dolor et mollis cursus. Aenean eget nibh hendrerit, convallis nisi sit amet, tempor lectus. Vestibulum pulvinar lorem at dui euismod, at vehicula leo porta. Morbi in accumsan tellus. Maecenas dapibus varius erat, a condimentum est placerat id. Proin at nulla eu mi posuere euismod. Vestibulum sed ante sit amet lacus lobortis facilisis. Donec turpis libero, efficitur nec euismod nec, efficitur ut leo. In hac habitasse platea dictumst. Curabitur vel diam ullamcorper, mollis augue a, iaculis ligula. Duis blandit ornare tellus et sagittis.</p>
+
+                        <p>Mauris faucibus tempor aliquet. Vestibulum enim nisl, lobortis vel consequat gravida, elementum at urna. Aenean lacinia neque in sagittis tincidunt. Praesent ultrices fringilla metus, a consequat nibh porttitor ac. In eget sapien eget felis molestie lobortis. Pellentesque sagittis tellus ex, at maximus metus aliquam eget. Donec vitae consequat velit, ac pellentesque urna.</p>
+
+                        <p>Integer dignissim justo eget massa molestie euismod. Curabitur non nulla augue. Praesent non molestie ipsum, eu imperdiet tortor. Aliquam et nibh quis mi sagittis porta. Nam quis ante lacus. Nam tincidunt velit sed nibh molestie, quis convallis libero laoreet. Sed id vehicula sapien. Nulla dignissim enim eu venenatis molestie.</p>
+
+                        <div class="my-16">
+                            <div class="muf-video-wrapper">
+	<div class="alasu-video-poster-wrapper">
+		<!-- Put the image for the video here -->
+		<img src="/docs/assets/images/video_bg.jpg" alt="Video Poster Image">
+	</div>
+	<div class="muf-video-container hidden">
+		<!-- Embed the video from service here -->
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/zslvPW7U9SU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+	</div>
+</div>
+
+                        </div>
+
+                        <p>Sed eu tempus purus, ut pulvinar eros. Nulla ut sem vitae ante scelerisque auctor sit amet id arcu. Curabitur mattis dolor et mollis cursus. Aenean eget nibh hendrerit, convallis nisi sit amet, tempor lectus. Vestibulum pulvinar lorem at dui euismod, at vehicula leo porta. Morbi in accumsan tellus. Maecenas dapibus varius erat, a condimentum est placerat id. Proin at nulla eu mi posuere euismod. Vestibulum sed ante sit amet lacus lobortis facilisis. Donec turpis libero, efficitur nec euismod nec, efficitur ut leo. In hac habitasse platea dictumst. Curabitur vel diam ullamcorper, mollis augue a, iaculis ligula. Duis blandit ornare tellus et sagittis.</p>
+
+                        <p>Mauris faucibus tempor aliquet. Vestibulum enim nisl, lobortis vel consequat gravida, elementum at urna. Aenean lacinia neque in sagittis tincidunt. Praesent ultrices fringilla metus, a consequat nibh porttitor ac. In eget sapien eget felis molestie lobortis. Pellentesque sagittis tellus ex, at maximus metus aliquam eget. Donec vitae consequat velit, ac pellentesque urna.</p>
+
+                        <p>Integer dignissim justo eget massa molestie euismod. Curabitur non nulla augue. Praesent non molestie ipsum, eu imperdiet tortor. Aliquam et nibh quis mi sagittis porta. Nam quis ante lacus. Nam tincidunt velit sed nibh molestie, quis convallis libero laoreet. Sed id vehicula sapien. Nulla dignissim enim eu venenatis molestie.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="muf-background-bleed flex items-stretch" style="background-image: url('/docs/assets/images/hero.jpg')">
+	<div class="bg-charcoal/90 w-full text-white pt-24 md:pt-28 pb-20">
+		<div class="container">
+			<h2 class="deco-rule deco-rule--white text-center md:text-left">
+				Featured Events
+			</h2>
+			<div class="muf-carousel muf-events-wrapper mt-12" data-flickity="{ 
+		            &quot;adaptiveHeight&quot; : false, 
+		            &quot;cellAlign&quot; : &quot;left&quot;,
+		            &quot;pageDots&quot; : false,
+		            &quot;wrapAround&quot; : true
+		        }">
+				<div class="muf-carousel-item">
+					<a href="#" class="muf-link-reset">
+						<div class="relative muf-event-image-wrapper">
+							<img src="/docs/assets/images/event01.jpg" alt="Event Image" class="object-cover w-full h-full">
+							<div class="absolute top-4 left-4 text-white muf-text-shadow z-20">
+								<div class="text-sm uppercase">May</div>
+								<div class="text-4xl -mt-2">16</div>
+							</div>
+							<div class="muf-hover-overlay">
+								&nbsp;
+							</div>
+						</div>
+						<div class="deco-rule md:text-lg mt-4">Homecoming</div>
+					</a>
+				</div>
+				<div class="muf-carousel-item">
+					<a href="#" class="muf-link-reset">
+						<div class="relative muf-event-image-wrapper">
+							<img src="/docs/assets/images/event02.jpg" alt="Event Image" class="object-cover w-full h-full">
+							<div class="absolute top-4 left-4 text-white muf-text-shadow z-20">
+								<div class="text-sm uppercase">May</div>
+								<div class="text-4xl -mt-2">16</div>
+							</div>
+							<div class="muf-hover-overlay">
+								&nbsp;
+							</div>
+						</div>
+						<div class="deco-rule md:text-lg mt-4">Homecoming</div>
+					</a>
+				</div>
+				<div class="muf-carousel-item">
+					<a href="#" class="muf-link-reset">
+						<div class="relative muf-event-image-wrapper">
+							<img src="/docs/assets/images/event03.jpg" alt="Event Image" class="object-cover w-full h-full">
+							<div class="absolute top-4 left-4 text-white muf-text-shadow z-20">
+								<div class="text-sm uppercase">May</div>
+								<div class="text-4xl -mt-2">16</div>
+							</div>
+							<div class="muf-hover-overlay">
+								&nbsp;
+							</div>
+						</div>
+						<div class="deco-rule md:text-lg mt-4">Memorial Student Center Fountain Day</div>
+					</a>
+				</div>
+				<div class="muf-carousel-item">
+					<a href="#" class="muf-link-reset">
+						<div class="relative muf-event-image-wrapper">
+							<img src="/docs/assets/images/event04.jpg" alt="Event Image" class="object-cover w-full h-full">
+							<div class="absolute top-4 left-4 text-white muf-text-shadow z-20">
+								<div class="text-sm uppercase">May</div>
+								<div class="text-4xl -mt-2">16</div>
+							</div>
+							<div class="muf-hover-overlay">
+								&nbsp;
+							</div>
+						</div>
+						<div class="deco-rule md:text-lg mt-4">Homecoming</div>
+					</a>
+				</div>
+				<div class="muf-carousel-item">
+					<a href="#" class="muf-link-reset">
+						<div class="relative muf-event-image-wrapper">
+							<img src="/docs/assets/images/event03.jpg" alt="Event Image" class="object-cover w-full h-full">
+							<div class="absolute top-4 left-4 text-white muf-text-shadow z-20">
+								<div class="text-sm uppercase">May</div>
+								<div class="text-4xl -mt-2">16</div>
+							</div>
+							<div class="muf-hover-overlay">
+								&nbsp;
+							</div>
+						</div>
+						<div class="deco-rule md:text-lg mt-4">Memorial Student Center Fountain Day</div>
+					</a>
+				</div>
+			</div>
+			<a href="#" class="muf-link-reset muf-button">
+				View all events
+			</a>
+		</div>
+	</div>
+</div>
+        </main>
+        <script></script>
+    
+            </div>
+            
+            <div class="h-10 opacity-75 flex justify-center items-center bg-gold sm:bg-blue smed:bg-gold md:bg-blue mlg:bg-gold lg:bg-blue xl:bg-gold text-white p-8 text-center">
+    <span class="sm:hidden">No breakpoint</span>
+    <span class="hidden sm:block smed:hidden">Breakpoint <span class="font-bold text-2xl">sm</span></span>
+    <span class="hidden smed:block md:hidden">Breakpoint <span class="font-bold text-2xl">smed</span></span>
+    <span class="hidden md:block mlg:hidden">Breakpoint <span class="font-bold text-2xl">md</span></span>
+    <span class="hidden mlg:block lg:hidden">Breakpoint <span class="font-bold text-2xl">mlg</span></span>
+    <span class="hidden lg:block xl:hidden">Breakpoint <span class="font-bold text-2xl">lg</span></span>
+    <span class="hidden xl:block 2xl:hidden">Breakpoint <span class="font-bold text-2xl">xl</span></span>
+    <span class="hidden 2xl:block">Breakpoint <span class="font-bold text-2xl">2xl</span></span>
+</div>
+
+        </div>
+        <!-- OU: Start Consistent Footer on all pages -->
+        <footer class="bg-charcoal font-sans text-white text-center pt-20 pb-8 border-t-4 border-green md:text-left" id="muf-footer">
+            <div class="container">
+                <div class="grid gap-12 md:grid-cols-4 text-sm leading-5">
+                    <div>
+                        <a href="/" class="muf-footer-logo">
+                            <img src="assets/images/footer_logo@2x.png?3a64796efd471150edd95f0f91627ed7" class="">
+                        </a>
+                        <div class="font-bold">Marshall University Foundation, Inc.</div>
+                        <div>
+                            519 John Marshall Dr. <br>
+                            Huntington, WV 25703 <br>
+                            304-696-6264 <br>
+                            <a href="mailto:foundation@marshall.edu" class="muf-link-reset text-green hover:text-white hover:underline hover:duration-300">foundation@marshall.edu</a>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2 md:columns-2 md:pt-20">
+                        <ul class="muf-list-reset muf-footer-links uppercase font-bold space-y-8">
+                            <li>
+                                <a href="/" class="muf-link-reset">Marshall University Homepage</a>
+                            </li>
+                            <li>
+                                <a href="/" class="muf-link-reset">Brad D. Smith Foundation Hall</a>
+                            </li>
+                            <li>
+                                <a href="/" class="muf-link-reset">Contact the Foundation</a>
+                            </li>
+                            <li>
+                                <a href="/" class="muf-link-reset">Update Your Information</a>
+                            </li>
+                            <li>
+                                <a href="/" class="muf-link-reset">Request a Transcript</a>
+                            </li>
+                            <li>
+                                <a href="/" class="muf-link-reset">Make a Gift</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="md:pt-20 md:flex md:items-end">
+                        <div class="flex items-center justify-center space-x-8 text-white">
+                            <a href="" class="muf-link-reset hover:text-green hover:duration-300">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5002 1.2002C18.4649 1.2002 23.3002 6.03552 23.3002 12.0002C23.3002 17.3908 19.3508 21.8588 14.1877 22.6689V15.1221H16.7042L17.183 12.0002H14.1877V9.97429C14.1877 9.1202 14.6061 8.28769 15.9477 8.28769H17.3096L17.3096 5.62988C17.3096 5.62988 16.0736 5.41894 14.892 5.41894H14.892L14.6482 5.42392L14.4102 5.4388C12.2172 5.62368 10.8127 7.09452 10.8127 9.62082V12.0002H8.0705L8.07051 15.1221H10.8127L10.8127 22.6689C5.6496 21.8588 1.7002 17.3908 1.7002 12.0002C1.7002 6.03552 6.53552 1.2002 12.5002 1.2002Z" class="fill-current"></path>
+                                </svg>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                            <a href="" class="muf-link-reset hover:text-green hover:duration-300">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3002 5.6782C22.5055 6.031 21.6514 6.2686 20.755 6.3757C21.6703 5.8276 22.3723 4.9591 22.7035 3.9241C21.8476 4.4317 20.899 4.8007 19.8892 4.9996C19.081 4.1383 17.929 3.6001 16.6546 3.6001C14.2075 3.6001 12.223 5.5846 12.223 8.0317C12.223 8.3791 12.2626 8.7175 12.3373 9.0415C8.6545 8.857 5.3893 7.0921 3.2032 4.411C2.8225 5.0653 2.6038 5.8267 2.6038 6.6394C2.6038 8.1766 3.3859 9.5329 4.5748 10.3276C3.8485 10.3042 3.1654 10.1053 2.5678 9.7732C2.5678 9.7921 2.5678 9.8101 2.5678 9.829C2.5678 11.9764 4.0951 13.7674 6.1228 14.1742C5.7511 14.2759 5.3596 14.3299 4.9546 14.3299C4.6693 14.3299 4.3912 14.302 4.1212 14.2507C4.6855 16.0111 6.3217 17.2927 8.2612 17.3287C6.7447 18.5176 4.834 19.2259 2.7577 19.2259C2.4004 19.2259 2.0476 19.2052 1.7002 19.1638C3.6613 20.4211 5.99049 21.1546 8.49339 21.1546C16.6447 21.1546 21.1015 14.4019 21.1015 8.5456C21.1015 8.3539 21.097 8.1622 21.0889 7.9723C21.9547 7.3468 22.7062 6.5665 23.3002 5.6782Z" class="fill-current"></path>
+                                </svg>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                            <a href="" class="muf-link-reset hover:text-green hover:duration-300">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6839 1.20117C14.881 1.20359 15.4836 1.21085 16.0148 1.22732L16.2396 1.23496C16.4631 1.24319 16.6871 1.25322 16.9529 1.26539C18.1025 1.31765 18.8875 1.50019 19.5745 1.76698C20.2952 2.03822 20.948 2.46342 21.4875 3.01292C22.0369 3.55237 22.462 4.20516 22.7332 4.92579C23.0002 5.61274 23.1827 6.39779 23.2352 7.54735C23.2493 7.85744 23.2606 8.11071 23.2695 8.37253L23.2765 8.60056C23.2905 9.10576 23.297 9.70481 23.2992 10.8163L23.3001 11.6729L23.3002 12.0001C23.3002 12.1129 23.3002 12.2219 23.3001 12.3274L23.2992 13.1839C23.2968 14.3809 23.2895 14.9835 23.2731 15.5147L23.2655 15.7395C23.2573 15.963 23.2473 16.1871 23.2352 16.4529C23.1827 17.6024 23.0002 18.3875 22.7332 19.0745C22.1721 20.5251 21.0253 21.6719 19.5746 22.233C18.8877 22.5 18.1026 22.6825 16.9531 22.735C16.643 22.7492 16.3897 22.7604 16.1279 22.7693L15.8999 22.7763C15.3947 22.7904 14.7956 22.7968 13.6841 22.799H11.3165C9.43551 22.7952 9.02223 22.7795 8.04752 22.735C6.898 22.6825 6.11296 22.5 5.42596 22.233C4.70534 21.9618 4.05254 21.5367 3.51309 20.9873C2.9637 20.4479 2.53859 19.7951 2.2674 19.0745C2.00041 18.3875 1.81787 17.6025 1.76539 16.4529C1.75321 16.1871 1.74318 15.9631 1.73496 15.7396L1.72732 15.5148C1.71085 14.9836 1.70359 14.381 1.70117 13.1839V10.8163C1.70341 9.70479 1.70984 9.10574 1.72393 8.60055L1.731 8.37252C1.7399 8.11071 1.75119 7.85744 1.76539 7.54735C1.81765 6.39779 2.00019 5.61274 2.26698 4.92575C2.53826 4.20509 2.96349 3.55229 3.513 3.01287C4.05245 2.46348 4.70525 2.03837 5.42588 1.76719C6.11283 1.50019 6.89787 1.31765 8.04744 1.26518C8.31323 1.25305 8.53727 1.24306 8.76074 1.23486L8.98553 1.22725C9.5167 1.21084 10.1194 1.20358 11.3164 1.20117L13.6839 1.20117ZM13.1451 3.14634L11.8552 3.14634C11.7553 3.14642 11.659 3.14652 11.5661 3.14664L11.0483 3.14768C9.4479 3.15216 9.04709 3.16752 8.13601 3.20909C7.08303 3.25711 6.51118 3.43305 6.13062 3.58095C5.66153 3.75408 5.23721 4.03014 4.88884 4.38884C4.53011 4.73721 4.25401 5.16155 4.08086 5.63066C3.93296 6.01127 3.75706 6.58307 3.709 7.63605C3.69861 7.86384 3.68986 8.05973 3.6825 8.25043L3.67433 8.47851C3.65551 9.05102 3.6484 9.6731 3.64656 11.0661V12.9344C3.6484 14.3274 3.65551 14.9495 3.67433 15.522L3.6825 15.7501C3.68986 15.9408 3.69861 16.1367 3.709 16.3644C3.75702 17.4174 3.93296 17.9893 4.08086 18.3698C4.254 18.8389 4.53006 19.2633 4.88875 19.6116C5.23712 19.9703 5.66144 20.2464 6.13054 20.4195C6.51114 20.5674 7.08294 20.7433 8.13592 20.7914C8.36368 20.8018 8.55954 20.8105 8.75022 20.8179L8.97827 20.826C9.55073 20.8449 10.1728 20.852 11.5659 20.8538H13.4343C14.8275 20.852 15.4496 20.8449 16.022 20.826L16.2501 20.8179C16.4408 20.8105 16.6366 20.8018 16.8643 20.7914C17.9173 20.7433 18.4891 20.5674 18.8697 20.4195C19.8116 20.0562 20.556 19.3117 20.9194 18.3698C21.0672 17.9892 21.2432 17.4174 21.2912 16.3644C21.3328 15.4533 21.3482 15.0525 21.3527 13.4522L21.3537 12.9344C21.3538 12.8415 21.3539 12.7452 21.354 12.6453V11.3552C21.3539 11.2553 21.3538 11.159 21.3537 11.0661L21.3527 10.5483C21.3482 8.94794 21.3328 8.54713 21.2912 7.63605C21.2432 6.58307 21.0673 6.01122 20.9194 5.63066C20.7462 5.16157 20.4702 4.73725 20.1115 4.38888C19.7631 4.03019 19.3388 3.75412 18.8697 3.58099C18.4891 3.43309 17.9173 3.25719 16.8643 3.20913C15.9532 3.16757 15.5524 3.15217 13.952 3.14768L13.4342 3.14664C13.3413 3.14652 13.245 3.14642 13.1451 3.14634ZM12.5001 6.4542C15.563 6.4542 18.046 8.93719 18.046 12.0001C18.046 15.063 15.563 17.546 12.5001 17.546C9.4372 17.546 6.9542 15.063 6.9542 12.0001C6.9542 8.93719 9.4372 6.4542 12.5001 6.4542ZM12.5002 8.40017C10.512 8.40017 8.90022 10.0119 8.90022 12.0001C8.90022 13.9883 10.5119 15.6001 12.5001 15.6001C14.4883 15.6001 16.1001 13.9883 16.1001 12.0001C16.1001 10.0119 14.4884 8.40017 12.5002 8.40017ZM18.2652 4.93912C18.9809 4.93912 19.5611 5.51935 19.5611 6.23509C19.5611 6.95084 18.9809 7.53106 18.2652 7.53106C17.5494 7.53106 16.9692 6.95084 16.9692 6.23509C16.9692 5.51935 17.5494 4.93912 18.2652 4.93912Z" class="fill-current"></path>
+                                </svg>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="muf-dashed-border-t pt-12 mt-12 md:flex md:justify-between md:items-center md:pt-4 md:mt-16">
+                    <ul class="muf-list-reset flex items-center justify-around md:space-x-8">
+                        <li>
+                            <a href="#" class="muf-link-reset leading-none text-xs hover:underline">Sitemap</a>
+                        </li>
+                        <li>
+                            <a href="#" class="muf-link-reset leading-none text-xs hover:underline">Site Disclaimer</a>
+                        </li>
+                        <li>
+                            <a href="#" class="muf-link-reset leading-none text-xs hover:underline">Privacy Policy</a>
+                        </li>
+                    </ul>
+                    <div class="text-gray-400 mt-6 text-sm md:mt-0">&copy; Copyright 2022</div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Consistent Footer on all pages -->
+        <!-- Start Desktop Search on all pages -->
+        <form id="muf-search-desktop">
+            <div class="extra-extra-skinny-container">
+                <button id="muf-search-trigger-close" class="text-green float-right">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.29297 5.20703L4.70703 3.79297L12 11.0859L19.293 3.79297L20.707 5.20703L4.70703 21.207L3.29297 19.793L10.5859 12.5L3.29297 5.20703Z" fill="#00AC3E"></path>
+                        <path d="M19.293 21.207L13 14.9141L14.4141 13.5L20.707 19.793L19.293 21.207Z" class="fill-current"></path>
+                    </svg>
+                    <span class="sr-only">Close Search</span>
+                </button>
+                <label for="muf-search-box-desktop">Search the site</label>
+                <div class="relative">
+                    <input type="text" name="muf-search" id="muf-search-box-desktop" class="w-full rounded-full bg-white border-none text-lg font-sans pl-8" placeholder="Start your search">
+                    <button class="muf-search-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.99927 2C5.14512 2 1.99927 5.14585 1.99927 9C1.99927 12.8541 5.14512 16 8.99927 16C10.7473 16 12.3443 15.348 13.5735 14.2812L13.9993 14.707V16L19.9993 22L21.9993 20L15.9993 14H14.7063L14.2805 13.5742C15.3473 12.345 15.9993 10.748 15.9993 9C15.9993 5.14585 12.8534 2 8.99927 2ZM8.99927 4C11.7725 4 13.9993 6.22673 13.9993 9C13.9993 11.7733 11.7725 14 8.99927 14C6.226 14 3.99927 11.7733 3.99927 9C3.99927 6.22673 6.226 4 8.99927 4Z" class="fill-current"></path>
+                        </svg>
+                        <span class="sr-only">Tap to search</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <!-- OU: End Consistent Mega Menu on all pages -->
+        <!-- Start Consistent JS on all pages -->
+        <script src="assets/js/app.js"></script>
+        <!-- OEnd Consistent JS on all pages -->
+    </body>
+</html>
+ 

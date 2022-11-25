@@ -1,0 +1,155 @@
+
+.muf-carousel {
+
+	&.muf-stats-wrapper {
+
+		.muf-carousel-item {
+			@apply mr-12 pl-12 smed:mr-16 smed:pl-16 md:mr-24 md:pl-24;
+			min-width: min-content;
+			max-width: 63%;
+
+			@screen smed {
+				max-width: 66%;
+			}
+
+			&:first-of-type {
+				@apply pl-0;
+			}
+
+			&:last-of-type {
+				@apply mr-0;
+			}
+		}
+	}
+
+	&.muf-news-wrapper {
+		@apply flex flex-col gap-8 my-12;
+
+		@screen md {
+			@apply block mb-0;
+		}
+
+		.muf-carousel-item {
+			@apply mr-12;
+			max-width: 75%;
+
+			@screen md {
+				max-width: 30%;
+			}
+
+			&:last-of-type {
+				@apply mr-0;
+			}
+		}
+	}
+
+	&.muf-events-wrapper {
+
+		.muf-carousel-item {
+			width: 290px;
+			min-height: 325px;
+			@apply mr-8;
+
+			.muf-event-image-wrapper {
+				height: 290px
+			}
+
+			.muf-hover-overlay {
+				@apply bg-green/[0.80] absolute top-0 left-0 w-full h-full z-10 opacity-0;
+				@include muf-transition();
+			}
+
+			&:hover {
+
+				.muf-hover-overlay {
+					@apply opacity-100;
+				}
+			}
+
+			&:last-of-type {
+				//@apply mr-0; //disabled since we're using wrapAround
+			}
+		}
+
+		.flickity-viewport {
+			margin-bottom: 0;
+		}
+	}
+
+	&.muf-photos-wrapper {
+		@apply text-center;
+
+		.muf-carousel-item {
+			width: 70vw;
+			max-width: 400px;
+			@apply mr-8;
+			min-height: 225px;
+		}
+	}
+}
+
+.flickity-viewport {
+	@apply mb-8;
+}
+
+.flickity-prev-next-button {
+	@apply relative bg-gray-100 p-4;
+	height: 20px;
+	width: 20px;
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 4.92969L2.92969 12L10 19.0703L11.5 17.5703L6.92969 13H21V11H6.92969L11.5 6.42969L10 4.92969Z' fill='%23131716'/%3E%3C/svg%3E%0A");
+	background-position: center;
+	background-repeat: no-repeat;
+	@include muf-transition();
+
+	svg {
+		@apply hidden;
+	}
+
+	&.next {
+		right: 0;
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 4.92969L12.5 6.42969L17.0703 11H3V13H17.0703L12.5 17.5703L14 19.0703L21.0703 12L14 4.92969Z' fill='%23131716'/%3E%3C/svg%3E%0A");
+
+		&:hover {
+			@apply bg-gray-200;
+			background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 4.92969L12.5 6.42969L17.0703 11H3V13H17.0703L12.5 17.5703L14 19.0703L21.0703 12L14 4.92969Z' fill='%23131716'/%3E%3C/svg%3E%0A");
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	&.previous {
+		left: 0;
+		margin-right: 0.5rem;
+
+		&:hover {
+			@apply bg-gray-200;
+			background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 4.92969L2.92969 12L10 19.0703L11.5 17.5703L6.92969 13H21V11H6.92969L11.5 6.42969L10 4.92969Z' fill='%23131716'/%3E%3C/svg%3E%0A");
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+.muf-photos-wrapper {
+	.flickity-prev-next-button {
+		@apply bg-gray-600;
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 4.92969L2.92969 12L10 19.0703L11.5 17.5703L6.92969 13H21V11H6.92969L11.5 6.42969L10 4.92969Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+
+		&.next {
+			background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 4.92969L12.5 6.42969L17.0703 11H3V13H17.0703L12.5 17.5703L14 19.0703L21.0703 12L14 4.92969Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+
+			&:hover {
+				@apply bg-gray-200;
+				background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 4.92969L12.5 6.42969L17.0703 11H3V13H17.0703L12.5 17.5703L14 19.0703L21.0703 12L14 4.92969Z' fill='%23131716'/%3E%3C/svg%3E%0A");
+			}
+		}
+
+		&.previous {
+
+			&:hover {
+				@apply bg-gray-200;
+				background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 4.92969L2.92969 12L10 19.0703L11.5 17.5703L6.92969 13H21V11H6.92969L11.5 6.42969L10 4.92969Z' fill='%23131716'/%3E%3C/svg%3E%0A");
+			}
+		}
+	}
+}

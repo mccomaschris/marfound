@@ -1,0 +1,76 @@
+
+#muf-search-box {
+	padding-top: 0.75em;
+	line-height: 22px;
+	@include muf-transition();
+
+	&:focus {
+		@apply ring-green pl-4;
+
+		+ .muf-search-button {
+			@apply bg-green text-white;
+			left: calc(100% - 42px);
+
+			&:hover {
+				@include muf-transition();
+				@apply text-green bg-white;
+			}
+		}
+	}
+}
+
+.muf-search-button {
+	@apply text-gray-300 absolute left-0 rounded-full p-2;
+	@include muf-transition();
+
+	&:focus {
+		@apply ring-white;
+	}
+}
+
+.muf-search {
+	@screen mlg {
+		@apply hidden;
+	}
+}
+
+#muf-search-desktop {
+	position: fixed;
+	@apply w-screen h-screen bg-green-light bg-opacity-95 flex items-center;
+	@apply opacity-0 invisible z-0; // hide the layer until requested
+	@include muf-transition();
+	
+	.show-search & {
+		@apply opacity-100 visible;
+		z-index: 200;
+	}
+
+	label {
+		@apply text-2xl font-serif block mb-4;
+		padding-left: 2rem;
+	}
+
+	#muf-search-box-desktop {
+		padding: 0.75em 3em;
+		line-height: 22px;
+		@include muf-transition();
+
+		&:focus {
+			@apply ring-green pl-4;
+
+			+ .muf-search-button {
+				@apply bg-green text-white;
+				left: calc(100% - 60px);
+
+				&:hover {
+					@include muf-transition();
+					@apply text-green bg-white;
+				}
+			}
+		}
+	}
+
+	.muf-search-button {
+		padding: 1rem;
+	}
+}

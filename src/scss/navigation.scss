@@ -1,0 +1,282 @@
+
+// States for menu interactivity
+
+.muf-navigation-wrapper { // Default is closed
+	@apply z-0 opacity-0;
+	@include muf-transition();
+
+	.show-menu & {
+		@apply z-20 opacity-100;
+	}
+
+	@screen mlg {
+		@apply opacity-100 z-20;
+	}
+}
+
+#muf-menu-trigger-close {
+	@apply hidden;
+}
+
+.show-menu {
+
+	#muf-menu-trigger-close {
+		@apply block;
+	}
+
+	#muf-menu-trigger-open {
+		@apply hidden;
+	}
+}
+
+@screen mlg {
+
+	#muf-menu-trigger-close, #muf-menu-trigger-open {
+		@apply hidden;
+	}
+}
+
+
+.muf-navigation-wrapper {
+	@apply absolute w-full bg-white pb-12;
+	box-shadow: 0px 32px 32px rgb(0 0 0 / 15%);
+
+	@screen mlg {
+		@apply shadow-none w-fit pb-0;
+		top: 0;
+		right: calc((100vw - 820px) / 2 + 1rem);
+
+		> .container {
+			@apply px-0;
+		}
+	}
+
+	@screen mlg {
+		right: calc((100vw - 975px) / 2 + 1rem);
+	}
+
+	@screen lg {
+		right: calc((100vw - 1230px) / 2 + 1rem);
+	}
+
+	@screen xl {
+		right: calc((100vw - 1300px) / 2 + 1rem);
+	}
+
+	@screen 2xl {
+		right: calc((100vw - 1536px) / 2 + 1rem);
+	}
+}
+
+.muf-primary-nav {
+
+	&-label {
+		@apply flex justify-between uppercase font-sans w-full font-bold;
+
+		&:hover {
+			@include muf-transition();
+			@apply text-green;
+
+			span {
+				@apply text-charcoal;
+			}
+		}
+
+		span {
+			@include muf-transition();
+			@apply opacity-25;
+		}
+
+		&[aria-expanded="false"] { // The accordion is closed
+
+			+ *[aria-labelledby] {
+				@apply hidden;
+			}
+		}
+
+		&[aria-expanded="true"] { // The accordion is open
+			@apply text-green;
+
+			span {
+				@apply opacity-100 rotate-45;
+			}
+
+			&:hover {
+
+				span {
+					@apply text-green;
+				}
+			}
+
+			+ *[aria-labelledby] {
+				@apply block;
+			}
+		}
+	}
+
+	&-list-wrapper {
+		@apply bg-green-light p-6 mt-4;
+	}
+
+	&-list {
+		@apply text-lg space-y-4;
+
+		a {
+			@apply text-charcoal;
+
+			&:hover {
+				@include muf-transition();
+				@apply underline;
+			}
+		}
+	}
+
+	&-sublist {
+		@apply font-sans space-y-2 text-sm pl-4 mt-2;
+
+		a {
+			@apply text-green;
+
+			&:hover {
+				@apply underline;
+			}
+		}
+	}
+
+	@screen smed {
+
+		> ul {
+
+			> li:nth-of-type(1)  {
+
+				.muf-primary-nav-list {
+					@apply columns-2 gap-6;
+				}
+			}
+
+			> li:nth-of-type(3)  {
+
+				.muf-primary-nav-list {
+					@apply columns-2 gap-6;
+				}
+			}
+		}
+	}
+
+	@screen mlg {
+		@apply order-2 py-4 px-6;
+
+		> .muf-list-reset {
+			@apply flex gap-6 items-center space-y-0;
+
+			// Handle the hover interactions
+
+			.muf-primary-nav-list-wrapper {
+				@apply block absolute opacity-0 invisible border-white w-max;
+				margin-top: 0;
+				border-top-width: 15px;
+				@include muf-transition();
+			}
+
+			> li {
+				@apply relative;
+
+				&:hover {
+
+					.muf-primary-nav-list-wrapper {
+						@apply opacity-100 visible;
+					}
+				}
+			}
+		}
+
+		> ul {
+
+			> li:nth-of-type(3)  {
+
+				.muf-primary-nav-list-wrapper {
+					right: -85px;
+				}
+			}
+
+			> li:nth-of-type(4) {
+
+				.muf-primary-nav-list-wrapper {
+					right: -25px;
+				}
+			}
+		}
+
+		.muf-primary-nav-label {
+			font-size: 16px;
+			line-height: 19px;
+			letter-spacing: 0.02em;
+
+			span {
+				@apply hidden;
+			}
+		}
+
+		.muf-primary-nav-list {
+			@apply text-base;
+		}
+	}
+
+	@screen lg {
+
+		> .muf-list-reset {
+			@apply px-4 gap-8;
+		}
+
+		> ul {
+
+			> li:nth-of-type(3)  {
+
+				.muf-primary-nav-list-wrapper {
+					right: -50px;
+				}
+			}
+		}
+	}
+}
+
+.muf-secondary-nav {
+	@apply muf-dashed-border-t-dark;
+
+	@screen mlg {
+		@apply order-1 border-t-0 ml-auto;
+
+		> .muf-list-reset {
+			@apply flex gap-4 items-center space-y-0;
+		}
+	}
+
+	@screen lg {
+		> .muf-list-reset {
+			@apply gap-6;
+		}
+	}
+}
+
+.muf-section-nav {
+
+	ul {
+		@apply space-y-8;
+
+		li {
+			line-height: 19.2px;
+		}
+	}
+
+	a {
+		@apply text-green font-sans uppercase font-bold;
+		font-size: 16px;
+		line-height: 19px;
+		letter-spacing: 0.02em;
+
+		&:hover {
+			@apply underline;
+		}
+	}
+}
+

@@ -1,0 +1,483 @@
+<extends src="main.html" locals='{"bodyClass" : "muf-dark"}'>
+
+    <block name="headExtra">
+    </block>
+
+    <block name="pagetitle">Marshall University Alumni Association</block>
+    <block name="hero">
+        <img src="/docs/assets/images/homecoming.jpg" alt="Marshall Hero Image" class="object-cover h-full w-screen" />
+    </block>
+    <block name="header-extra">
+        <div class="flex flex-wrap items-center w-content gap-4">
+            <a href="#" class="muf-link-reset muf-button">
+                Activate Membership
+            </a>
+            <a href="#" class="muf-link-reset muf-button muf-button--white">
+                Find Your Local Chapter
+            </a>
+        </div>
+    </block>
+    <block name="maincontent">
+        <main class="overflow-hidden" id="main">
+            <div class="container">
+                <div class="grid gap-6 md:grid-cols-2 md:gap-16">
+                    <div class="">
+                        <h2 class="deco-rule">We Are...</h2>
+                        <p>Pellentesque posuere. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Curabitur suscipit suscipit tellus. Praesent ac massa at ligula laoreet iaculis.</p>
+
+                        <p>Nullam accumsan lorem in dui. In turpis. Etiam imperdiet imperdiet orci. Quisque id odio. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis.</p>
+                    </div>
+                    <div class="">
+                        <div class="">
+                            <div class="muf-carousel muf-stats-wrapper muf-alumni-stats-wrapper mt-12">
+                                <div class="muf-carousel-item">
+                                    <div class="muf-stats-metric muf-stats-metric--vertical">
+                                        91,120
+                                    </div>
+                                    <div class="muf-stats-context">
+                                        Marshall University Alumni Around the world
+                                    </div>
+                                </div>
+                                <div class="muf-carousel-item">
+                                    <div class="muf-stats-metric">
+                                        25
+                                    </div>
+                                    <div class="muf-stats-context">
+                                        Alumni Chapters Spread across all 50 U.S. states
+                                    </div>
+                                </div>
+                                <div class="muf-carousel-item">
+                                    <div class="muf-stats-metric">
+                                        50+
+                                    </div>
+                                    <div class="muf-stats-context">
+                                        Activities and Events for Marshall University Alumni to get involved
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="muf-new-section">
+                <div class="flex items-center flex-col md:flex-row">
+                    <div class="md:w-1/2 mlg:w-2/3">
+                        <img src="/docs/assets/images/perks.jpg" alt="Descripte text">
+                    </div>
+                    <div class="md:w-1/2 muf-cut-left">
+                        <div class="bg-green text-white py-16 px-4 md:px-16">
+                            <h2 class="deco-rule deco-rule--white text-white">Perks of the Herd</h2>
+                            <p>Pellentesque posuere. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Curabitur suscipit suscipit tellus. Praesent ac massa at ligula laoreet iaculis.</p>
+                            <div class="flex flex-wrap items-center w-content gap-4">
+                                <a href="#" class="muf-link-reset muf-button muf-button--white">
+                                    Explore Member Benefits
+                                </a>
+                                <a href="#" class="muf-link-reset muf-button muf-border-white">
+                                    Access Career Center
+                                </a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <section class="grid gap-6 md:grid-cols-2 lg:gap-12"> 
+                <div class="">
+                    <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
+                    <div id="muf-map"></div>
+                </div>
+                <div class="flex items-center">
+                    <div class="muf-map-controls px-4 pb-16 md:px-0 md:py-0 w-full">
+                        <h2 class="deco-rule">Find your Local Chapter</h2>
+
+                        <div class="w-full">
+                            <div class="muf-tab-button-wrapper my-6 muf-x-scroll">
+                                <ul class="muf-list-reset muf-tab-list">
+                                    <li>
+                                        <button 
+                                            class="muf-tab-button muf-chapter-trigger"
+                                            id="mufTabButton01"
+                                            aria-controls="mufTabPanel01"
+                                            aria-expanded="true"
+                                            onclick="loadChapterMap('southeast')"
+                                        >
+                                            Southeast
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button 
+                                            class="muf-tab-button muf-chapter-trigger"
+                                            id="mufTabButton02"
+                                            aria-controls="mufTabPanel02"
+                                            aria-expanded="false"
+                                            onclick="loadChapterMap('northeast')"
+                                        >
+                                            Northeast
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button 
+                                            class="muf-tab-button muf-chapter-trigger"
+                                            id="mufTabButton03"
+                                            aria-controls="mufTabPanel03"
+                                            aria-expanded="false"
+                                            onclick="loadChapterMap('midwest')"
+                                        >
+                                            Midwest
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button 
+                                            class="muf-tab-button muf-chapter-trigger"
+                                            id="mufTabButton04"
+                                            aria-controls="mufTabPanel04"
+                                            aria-expanded="false"
+                                            onclick="loadChapterMap('west')"
+                                        >
+                                            West
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="">
+                                <div class="muf-tab-panel" id="mufTabPanel01" aria-labelledby="mufTabButton01">
+                                    <div class="sm:columns-2 space-y-8">
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Florida</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Fort Myers</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="">Palm Beach</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="">Space Coast</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="">Tampa Bay</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="">The Villages</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Georgia</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Atlanta</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Kentucky</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Cincinnati/North Kentucky</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">North Carolina</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Charolette</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="">Raleigh</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">South Carolina</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Charleston</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="">Myrtle Beach</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Tennesse</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Nashville</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Virginia</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Richmond</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">West Virginia </div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Beckley/Southern Coalfields</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="">Charleston</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="">Eastern Panhandle/Martinsburg</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="">Eastern Panhandle/Martinsburg</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="">Perkersburg/Mid-Ohio Valley</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="muf-tab-panel" id="mufTabPanel02" aria-labelledby="mufTabButton02">
+                                    <div class="sm:columns-2 space-y-8">
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Connecticut</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">New England</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">District of Columbia</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Washington D.C. / Baltimore</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Maine</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">New England</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Massachusetts</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">New England</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">New Hampshire</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">New England</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">New York</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Albany</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="">New York City</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Pennsylvania</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Philadelphia</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Rhode Island</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">New England</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Vermont</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">New England</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="muf-tab-panel" id="mufTabPanel03" aria-labelledby="mufTabButton03">
+                                    <div class="sm:columns-2 space-y-8">
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Ohio</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Cincinnati / Northern Kentucky Chapter</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="">Columbus</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="muf-tab-panel" id="mufTabPanel04" aria-labelledby="mufTabButton04">
+                                    <div class="sm:columns-2 space-y-8">
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Hawaii</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Honolulu</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid">
+                                            <div class="text-sm font-bold uppercase mb-2">Texas</div>
+                                            <ul class="muf-list-reset">
+                                                <li>
+                                                    <a href="#" class="">Houston</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <include src="events.html"></include>
+
+            <div class="muf-new-section mb-12 md:mb-16 lg:mb-24">
+                <include src="feature.html" locals='{"title" : "Share your News", "subtitle" : "We Want to Hear from the Herd"}'></include>
+            </div>
+        </main>
+        
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASMCuNKMTyYQmFBwU5J2p65N0w2Jd1wwU"></script>
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', loadChapterMap('southeast'));
+
+            function loadChapterMap(region) {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+
+                var mapStyles = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#6195a0"}]},{"featureType":"administrative.province","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"lightness":"0"},{"saturation":"0"},{"color":"#f5f5f2"},{"gamma":"1"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"lightness":"-3"},{"gamma":"1.00"}]},{"featureType":"landscape.natural.terrain","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#bae5ce"},{"visibility":"on"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45},{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#fac9a9"},{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels.text","stylers":[{"color":"#4e4e4e"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#787878"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"transit.station.airport","elementType":"labels.icon","stylers":[{"hue":"#0a00ff"},{"saturation":"-77"},{"gamma":"0.57"},{"lightness":"0"}]},{"featureType":"transit.station.rail","elementType":"labels.text.fill","stylers":[{"color":"#43321e"}]},{"featureType":"transit.station.rail","elementType":"labels.icon","stylers":[{"hue":"#ff6c00"},{"lightness":"4"},{"gamma":"0.75"},{"saturation":"-68"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#eaf6f8"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#c7eced"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"lightness":"-49"},{"saturation":"-53"},{"gamma":"0.79"}]}];
+
+                // Create empty LatLngBounds object
+                // We use this to auto set the map frame around the icons
+                var bounds = new google.maps.LatLngBounds();
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('muf-map');
+
+                // Make sure the map element is empty
+                mapElement.textContent = '';
+                
+                var mapOptions = {
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: mapStyles,
+                    streetViewControl: false,
+                    mapTypeControl: false,
+                    disableDefaultUI: true
+                };
+
+                var southeastChapters = [
+                    [26.614149, -81.825768, 'Fort Myers, FL'],
+                    [26.704330, -80.036438, 'Palm Beach, FL'],
+                    [28.282030, -81.348007, 'Space Coast, FL'],
+                    [27.981340, -82.498589, 'Tampa Bay, FL'],
+                    [28.932810, -81.959137, 'The Villages, FL'],
+                    [33.748992, -84.390264, 'Atlanta , GA'],
+                    [39.049907, -84.665161, 'Cincinati, KY'],
+                    [34.762248, -79.201248, 'Charolette , NC'],
+                    [35.780397, -78.639098, 'Raleigh, NC'],
+                    [32.787601, -79.940272, 'Charleston, SC'],
+                    [37.538508, -77.43428, 'Richmond, VA'],
+                    [37.778170, -81.188155, 'Beckley, WV'],
+                    [38.350599, -81.633281, 'Charleston, WV'],
+                    [39.456252, -77.963960, 'Martinsburg, WV'],
+                    [39.321683, -81.440914, 'Parkersburg, WV'],
+                ]
+
+                var northeastChapters = [
+                    [42.734566, -73.229925, 'New England'],
+                    [38.9215198, -77.4801465, 'Washington D.C.'],
+                    [40.741895, -73.989308, 'New York, NY'],
+                    [41.784224, -72.7027816, 'Albany, NY'],
+                    [39.9527237, -75.1635262, 'Philadelphia, PA'],
+                ]
+
+                var midwestChapters = [
+                    [39.9622601, -83.0007065, 'Columnbus, OH'],
+                    [39.049907, -84.665161, 'Cincinati, KY'],
+                ]
+
+                var westChapters = [
+                    [21.304547, -157.855676, 'Honolulu, HI'],
+                    [29.7589382, -95.3676974, 'Houston, TX'],
+                ]    
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's loop through the chapters and add them to the map
+                
+                if (region === 'southeast') {
+                    var regionArray = southeastChapters;
+                } else if (region === 'northeast') {
+                    var regionArray = northeastChapters;
+                } else if (region === 'midwest') {
+                    var regionArray = midwestChapters;
+                } else {
+                    var regionArray = westChapters;
+                }
+
+                for (i = 0; i < regionArray.length; i++) {  
+                    var marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(regionArray[i][0], regionArray[i][1]),
+                        map: map,
+                        title: regionArray[i][2],
+                        icon: '/docs/assets/images/map_marker.svg',
+                        clickable: false
+                    });
+
+                    // Extend the bounds to include each marker's position
+                    bounds.extend(marker.position);
+                }
+
+                // Now, make sure the frame uses the bounds we set from the markers
+                map.fitBounds(bounds);
+
+                // Set the zoom level based on the bounds
+                map.panToBounds(bounds);
+
+                /*
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(26.614149, -81.825768), // Fort Meyer
+                    map: map,
+                    icon: '/docs/assets/images/map_marker.svg',
+                    clickable: false
+                });
+                */
+            }
+        </script>
+    </block>
+</extends> 

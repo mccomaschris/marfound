@@ -1,0 +1,49 @@
+
+.muf-tab {
+
+	&-list {
+		@apply inline-flex gap-2 items-center mr-8 text-sm;
+	}
+
+	&-button {
+		@apply rounded-full no-underline border-charcoal/[0.10] border-2 uppercase px-6 pb-4 pt-5 inline-flex items-center text-center leading-none font-bold font-sans justify-center whitespace-nowrap;
+		@include muf-transition();
+
+		&:hover {
+			@apply bg-green text-white border-green;
+		}
+
+		&[aria-expanded="true"] {
+			@apply bg-green text-white border-green;
+
+			&:hover {
+				@apply bg-green-dark;
+			}
+		}
+	}
+
+	&-button-wrapper {
+		@apply overflow-x-scroll w-full;
+		scrollbar-width: none; /* Firefox */
+    	-ms-overflow-style: none;  /* Internet Explorer 10+ */
+    	max-width: calc(100vw - 2rem);
+
+    	&::-webkit-scrollbar { /* WebKit */
+		    width: 0;
+		    height: 0;
+		}
+	}
+
+	&-panel {
+		@apply bg-charcoal/[0.05] p-4 md:p-6 w-full text-sm font-sans;
+	}
+}
+
+
+.muf-map-controls .muf-tab {
+
+	&-panel {
+		//@apply bg-charcoal/[0.05] p-4 md:p-6 w-full text-sm font-sans;
+		@apply bg-transparent p-0 md:p-0 text-base font-serif;
+	}
+}

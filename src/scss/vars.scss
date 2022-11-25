@@ -1,0 +1,8 @@
+
+$muf-green : #00AC3E;
+$muf-green-light: #F0FAF3;
+$muf-blue : rgba(2, 99, 224, 0.7);
+
+@mixin muf-transition() {
+    @apply transition-all duration-300;
+}

@@ -1,0 +1,26 @@
+
+.muf-breadcrumbs {
+	@apply uppercase;
+
+	li {
+		@apply flex items-center;
+
+		&:after {
+			content : "";
+			background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.66602 3.95312L5.66602 4.95312L8.71289 8L5.66602 11.0469L6.66602 12.0469L10.7129 8L6.66602 3.95312Z' fill='%23131716' fill-opacity='0.25'/%3E%3C/svg%3E");
+			display: inline-flex;
+			height: 16px;
+			width: 16px;
+			margin-right: 0.25rem;
+			margin-left: 0.25rem;
+		}
+
+		&:last-of-type:after {
+			display: none;
+		}
+	}
+
+	.no-breadcrumbs & {
+		display: none;
+	}
+}
