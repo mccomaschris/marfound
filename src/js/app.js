@@ -1,5 +1,8 @@
 
-// Main nav accordions
+/*
+* Main navigation accordions 
+*/
+
 let accordionButtons = document.getElementsByClassName('muf-accordion-button')
 
 for (let i = 0; i < accordionButtons.length; i++) {
@@ -23,7 +26,10 @@ function toggleAccordion(event) {
     }
 }
 
-// Show/hide the menu
+/*
+* Show/hide the menu 
+*/
+
 let body = document.body
 
 let menuOpenButton = document.getElementById('muf-menu-trigger-open')
@@ -41,7 +47,10 @@ function closeMenu(event) {
 	body.classList.remove("show-menu")
 }
 
-// Show/hide the search
+/*
+* Show/hide the search 
+*/
+
 let searchOpenButton = document.getElementById('muf-search-trigger-open')
 let searchCloseButton = document.getElementById('muf-search-trigger-close')
 
@@ -56,6 +65,26 @@ function openSearch(event) {
 
 function closeSearch(event) {
 	body.classList.remove("show-search")
+}
+
+/*
+* Deal with the section nav open/close 
+*/
+
+let sectionNavTrigger = document.getElementById('muf-section-nav-trigger')
+
+if (sectionNavTrigger) {
+    sectionNavTrigger.addEventListener(
+        'click', 
+        function() {
+            if (this.getAttribute('aria-expanded') === 'false') {
+                this.setAttribute('aria-expanded', true)
+            } else {
+                this.setAttribute('aria-expanded', false)
+            }
+        }, 
+        false
+    )
 }
 
 /*
@@ -108,7 +137,7 @@ function toggleTab(event) {
 
 
 /*
-News Carousel
+* News Carousel
 */
 
 // On larger screens the news carousel can be initialized
@@ -133,6 +162,27 @@ if (w <= 819) {
         });
     }
 }
+
+/*
+* Video poster swap
+*/
+
+let videoPoster = document.getElementsByClassName('muf-video-poster-wrapper')
+
+for (let i = 0; i < videoPoster.length; i++) {
+    videoPoster[i].addEventListener('click', showVideo, false)
+}
+
+function showVideo(event) {
+    this.classList.add('hidden')
+
+    this.nextElementSibling.classList.remove('hidden')
+}
+
+
+/*
+* Make some fixes around window resizes
+*/
 
 window.addEventListener("resize", resetCarousels);
 

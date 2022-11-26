@@ -94,9 +94,10 @@ module.exports = {
       },
       colors: {
         green: {
-            'DEFAULT' : '#00AC3E',
+            'DEFAULT' : '#00852E', //#00AC3E
             'light' : '#F0FAF3',
-            'dark' : '#009435'
+            'over-dark' : '#00AC3E',
+            'dark' : '#006624' //#009435
         },
         blue: {
             'DEFAULT' : 'rgba(2, 99, 224, 0.7)'

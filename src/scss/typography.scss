@@ -22,6 +22,7 @@
         &.md\:text-left {
 
             @screen md {
+                text-align: left;
 
                 &:after {
                     margin: 24px 0;

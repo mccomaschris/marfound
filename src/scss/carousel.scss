@@ -30,10 +30,9 @@
 		}
 
 		.muf-carousel-item {
-			@apply mr-12;
-			max-width: 75%;
 
 			@screen md {
+				@apply mr-12;
 				max-width: 30%;
 			}
 
