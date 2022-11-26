@@ -601,7 +601,7 @@ select {
     top: -1em;
   }
   a[href]:not(.muf-link-reset):not(.cc-link) {
-    color: #00AC3E;
+    color: #00852E;
     text-decoration-line: none;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -612,7 +612,7 @@ select {
   color: rgb(19 23 22 / var(--tw-text-opacity));
   text-decoration-line: underline;
     text-decoration-thickness: 0.125em;
-    text-decoration-color: #00AC3E;
+    text-decoration-color: #00852E;
 }
   p {
   margin-bottom: 1rem;
@@ -7061,7 +7061,7 @@ select {
   color: rgb(255 255 255 / var(--tw-text-opacity));
   text-decoration-line: underline;
   text-decoration-thickness: 0.125em;
-  text-decoration-color: #00AC3E;
+  text-decoration-color: #00852E;
 }
 
 #muf-search-box {
