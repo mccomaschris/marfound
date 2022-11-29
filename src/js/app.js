@@ -68,6 +68,21 @@ function closeSearch(event) {
 }
 
 /*
+* Allow the search to submit on enter keypress 
+*/
+
+let searchInput = document.getElementById("muf-search-box")
+let searchButton = document.getElementById("muf-search-button")
+
+searchInput.addEventListener("keypress", function(event) {
+  
+  if (event.key === "Enter") {
+    event.preventDefault()
+    searchButton.click()
+  }
+})
+
+/*
 * Deal with the section nav open/close 
 */
 
