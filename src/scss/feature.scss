@@ -10,14 +10,14 @@
 	}
 
 	&-header {
-		@apply text-center mb-12;
+		@apply text-center mb-12 px-4;
 
 		.deco-rule:after {
 			margin: 24px auto;
 		}
 
 		@screen md {
-			@apply col-span-9 order-1;
+			@apply col-span-9 order-1 px-0;
 		}
 
 		@screen lg {
@@ -43,7 +43,7 @@
 		@apply ml-4 flex justify-end;
 
 		img {
-			@apply w-full;
+			@apply w-full h-full;
 			object-fit: cover;
 
 			@screen sm {
@@ -76,6 +76,7 @@
 
 		@screen sm {
 			max-width: calc(600px + 2rem);
+			margin-bottom: 7rem;
 		}
 
 		@screen smed {
@@ -93,6 +94,7 @@
 	}
 
 	&-box-content {
+		@apply py-8;
 
 		@screen sm {
 			max-width: calc(100vw - ((100vw - 600px + 2rem)/2));
@@ -126,7 +128,8 @@
 		text-align: center;
 
 		@screen md {
-			@apply order-4 col-start-5 -mr-48 mt-0;
+			@apply order-4 col-start-1 col-span-3;
+			margin-top: -7rem;
 		}
 	}
 }

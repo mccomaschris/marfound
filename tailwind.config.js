@@ -49,6 +49,9 @@ module.exports = {
       'sm': ['14px', {
         lineHeight: '20px',
       }],
+      'smed': ['16px', {
+        lineHeight: '19.2px',
+      }],
       'base': ['18px', {
         lineHeight: '24px',
       }],

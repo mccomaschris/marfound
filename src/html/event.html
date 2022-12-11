@@ -10,16 +10,16 @@
     <block name="maincontent">
         <main class="overflow-hidden mt-16 md:mt-24" id="main">
             <div class="container">
-                <div class="muf-main-grid grid md:grid-cols-12 gap-6 md:gap-12">
+                <div class="muf-main-grid grid md:grid-cols-12 gap-24 md:gap-12">
 
                     <div class="md:col-span-4 lg:col-span-3">
                         <div>
                             <div class="bg-charcoal text-white px-6 py-8">
-                                <div class="deco-rule deco-rule--white italic text-white">
+                                <div class="deco-rule deco-rule--white italic text-white text-smed">
                                     Event Details
                                 </div>
                                 <div class="space-y-6 mb-6">
-                                    <div class="">
+                                    <div class="space-y-1">
                                         <div class="uppercase text-sm text-gray-300">
                                             Time
                                         </div>
@@ -27,7 +27,7 @@
                                             7-9 pm
                                         </div>
                                     </div>
-                                    <div class="">
+                                    <div class="space-y-1">
                                         <div class="uppercase text-sm text-gray-300">
                                             Date
                                         </div>
@@ -35,7 +35,7 @@
                                             October 3, 2022
                                         </div>
                                     </div>
-                                    <div class="">
+                                    <div class="space-y-1">
                                         <div class="uppercase text-sm text-gray-300">
                                             Location
                                         </div>
@@ -59,7 +59,7 @@
 
                         <p>Integer dignissim justo eget massa molestie euismod. Curabitur non nulla augue. Praesent non molestie ipsum, eu imperdiet tortor. Aliquam et nibh quis mi sagittis porta. Nam quis ante lacus. Nam tincidunt velit sed nibh molestie, quis convallis libero laoreet. Sed id vehicula sapien. Nulla dignissim enim eu venenatis molestie.</p>
 
-                        <div class="my-16">
+                        <div class="my-8 md:my-16">
                             <include src="video.html"></include>
                         </div>
 
@@ -71,7 +71,9 @@
                     </div>
                 </div>
             </div>
-            <include src="events.html"></include>
+            <div class="muf-new-section">
+                <include src="events.html"></include>
+            </div>
         </main>
         <script></script>
     </block>

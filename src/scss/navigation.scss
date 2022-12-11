@@ -71,7 +71,7 @@
 .muf-primary-nav {
 
 	&-label {
-		@apply flex justify-between uppercase font-sans w-full font-bold;
+		@apply flex justify-between uppercase font-sans w-full font-bold text-smed;
 
 		&:hover {
 			@include muf-transition();
@@ -112,6 +112,10 @@
 				@apply block;
 			}
 		}
+
+		@screen md {
+			@apply text-base;
+		}
 	}
 
 	&-list-wrapper {
@@ -119,7 +123,7 @@
 	}
 
 	&-list {
-		@apply text-lg space-y-4;
+		@apply text-base space-y-4;
 
 		a {
 			@apply text-charcoal;
@@ -128,6 +132,10 @@
 				@include muf-transition();
 				@apply underline;
 			}
+		}
+
+		@screen md {
+			@apply text-lg;
 		}
 	}
 
@@ -164,7 +172,7 @@
 	}
 
 	@screen mlg {
-		@apply order-2 py-4 px-6;
+		@apply order-2 py-4 px-6 -mt-2;
 
 		> .muf-list-reset {
 			@apply flex gap-6 items-center space-y-0;
@@ -260,6 +268,8 @@
 
 .muf-section-nav {
 
+	@apply border-green border-t-2;
+
 	ul {
 		@apply space-y-8;
 
@@ -314,7 +324,7 @@
 			}
 
 			.muf-section-nav-icon {
-				@apply text-charcoal rotate-0;
+				@apply text-gray-400 rotate-0;
 			}
 		}
 
@@ -337,7 +347,7 @@
 	}
 
 	&-icon {
-		@apply text-gray-300 rotate-45 ;
+		@apply text-green rotate-45 ;
 		@include muf-transition();
 
 		@screen md {

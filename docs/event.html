@@ -120,7 +120,7 @@
                     </button>
                     <button id="muf-menu-trigger-close" class="text-green">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.29297 5.20703L4.70703 3.79297L12 11.0859L19.293 3.79297L20.707 5.20703L4.70703 21.207L3.29297 19.793L10.5859 12.5L3.29297 5.20703Z" fill="#00AC3E"></path>
+                            <path d="M3.29297 5.20703L4.70703 3.79297L12 11.0859L19.293 3.79297L20.707 5.20703L4.70703 21.207L3.29297 19.793L10.5859 12.5L3.29297 5.20703Z" class="fill-current"></path>
                             <path d="M19.293 21.207L13 14.9141L14.4141 13.5L20.707 19.793L19.293 21.207Z" class="fill-current"></path>
                         </svg>
                         <span class="sr-only">Close Menu</span>
@@ -135,7 +135,7 @@
                             <form>
                                 <label for="muf-search-box" class="sr-only">Search</label>
                                 <div class="relative">
-                                    <input type="text" name="muf-search" id="muf-search-box" class="w-full rounded-full bg-gray-100 border-none text-sm font-sans pl-8" placeholder="Search">
+                                    <input type="text" name="muf-search" id="muf-search-box" class="w-full rounded-full bg-gray-100 border-none text-sm font-sans pl-4" placeholder="Search">
                                     <button class="muf-search-button" id="muf-search-button">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.99927 2C5.14512 2 1.99927 5.14585 1.99927 9C1.99927 12.8541 5.14512 16 8.99927 16C10.7473 16 12.3443 15.348 13.5735 14.2812L13.9993 14.707V16L19.9993 22L21.9993 20L15.9993 14H14.7063L14.2805 13.5742C15.3473 12.345 15.9993 10.748 15.9993 9C15.9993 5.14585 12.8534 2 8.99927 2ZM8.99927 4C11.7725 4 13.9993 6.22673 13.9993 9C13.9993 11.7733 11.7725 14 8.99927 14C6.226 14 3.99927 11.7733 3.99927 9C3.99927 6.22673 6.226 4 8.99927 4Z" class="fill-current"></path>
@@ -408,16 +408,16 @@
                 
         <main class="overflow-hidden mt-16 md:mt-24" id="main">
             <div class="container">
-                <div class="muf-main-grid grid md:grid-cols-12 gap-6 md:gap-12">
+                <div class="muf-main-grid grid md:grid-cols-12 gap-24 md:gap-12">
 
                     <div class="md:col-span-4 lg:col-span-3">
                         <div>
                             <div class="bg-charcoal text-white px-6 py-8">
-                                <div class="deco-rule deco-rule--white italic text-white">
+                                <div class="deco-rule deco-rule--white italic text-white text-smed">
                                     Event Details
                                 </div>
                                 <div class="space-y-6 mb-6">
-                                    <div class="">
+                                    <div class="space-y-1">
                                         <div class="uppercase text-sm text-gray-300">
                                             Time
                                         </div>
@@ -425,7 +425,7 @@
                                             7-9 pm
                                         </div>
                                     </div>
-                                    <div class="">
+                                    <div class="space-y-1">
                                         <div class="uppercase text-sm text-gray-300">
                                             Date
                                         </div>
@@ -433,7 +433,7 @@
                                             October 3, 2022
                                         </div>
                                     </div>
-                                    <div class="">
+                                    <div class="space-y-1">
                                         <div class="uppercase text-sm text-gray-300">
                                             Location
                                         </div>
@@ -457,7 +457,7 @@
 
                         <p>Integer dignissim justo eget massa molestie euismod. Curabitur non nulla augue. Praesent non molestie ipsum, eu imperdiet tortor. Aliquam et nibh quis mi sagittis porta. Nam quis ante lacus. Nam tincidunt velit sed nibh molestie, quis convallis libero laoreet. Sed id vehicula sapien. Nulla dignissim enim eu venenatis molestie.</p>
 
-                        <div class="my-16">
+                        <div class="my-8 md:my-16">
                             <div class="muf-video-wrapper">
 	<div class="muf-video-poster-wrapper">
 		<!-- Put the image for the video here -->
@@ -479,7 +479,8 @@
                     </div>
                 </div>
             </div>
-            <div class="muf-background-bleed flex items-stretch" style="background-image: url('assets/images/hero.jpg')">
+            <div class="muf-new-section">
+                <div class="muf-background-bleed flex items-stretch" style="background-image: url('assets/images/hero.jpg')">
 	<div class="bg-charcoal/90 w-full text-white pt-24 md:pt-28 pb-20">
 		<div class="container">
 			<h2 class="deco-rule deco-rule--white muf-text-center md:text-left">
@@ -503,7 +504,7 @@
 								&nbsp;
 							</div>
 						</div>
-						<div class="deco-rule md:text-lg mt-4">Homecoming</div>
+						<div class="deco-rule deco-rule-small md:text-lg mt-4">Homecoming</div>
 					</a>
 				</div>
 				<div class="muf-carousel-item">
@@ -518,7 +519,7 @@
 								&nbsp;
 							</div>
 						</div>
-						<div class="deco-rule md:text-lg mt-4">Homecoming</div>
+						<div class="deco-rule deco-rule-small md:text-lg mt-4">Homecoming</div>
 					</a>
 				</div>
 				<div class="muf-carousel-item">
@@ -533,7 +534,7 @@
 								&nbsp;
 							</div>
 						</div>
-						<div class="deco-rule md:text-lg mt-4">Memorial Student Center Fountain Day</div>
+						<div class="deco-rule deco-rule-small md:text-lg mt-4">Memorial Student Center Fountain Day</div>
 					</a>
 				</div>
 				<div class="muf-carousel-item">
@@ -548,7 +549,7 @@
 								&nbsp;
 							</div>
 						</div>
-						<div class="deco-rule md:text-lg mt-4">Homecoming</div>
+						<div class="deco-rule deco-rule-small md:text-lg mt-4">Homecoming</div>
 					</a>
 				</div>
 				<div class="muf-carousel-item">
@@ -563,16 +564,17 @@
 								&nbsp;
 							</div>
 						</div>
-						<div class="deco-rule md:text-lg mt-4">Memorial Student Center Fountain Day</div>
+						<div class="deco-rule deco-rule-small md:text-lg mt-4">Memorial Student Center Fountain Day</div>
 					</a>
 				</div>
 			</div>
-			<a href="#" class="muf-link-reset muf-button">
+			<a href="#" class="muf-link-reset muf-button mt-8 md:mt-12">
 				View all events
 			</a>
 		</div>
 	</div>
 </div>
+            </div>
         </main>
         <script></script>
     
@@ -598,7 +600,7 @@
                         <a href="/" class="muf-footer-logo">
                             <img src="assets/images/footer_logo@2x.png?3a64796efd471150edd95f0f91627ed7" alt="Marshall University Foundation, Inc. logo mark" class="">
                         </a>
-                        <div class="font-bold">Marshall University Foundation, Inc.</div>
+                        <div class="font-bold mb-2">Marshall University Foundation, Inc.</div>
                         <div>
                             519 John Marshall Dr. <br>
                             Huntington, WV 25703 <br>
@@ -608,9 +610,14 @@
                     </div>
 
                     <div class="md:col-span-2 md:columns-2 md:pt-20">
-                        <ul class="muf-list-reset muf-footer-links uppercase font-bold space-y-8">
+                        <ul class="muf-list-reset muf-footer-links uppercase font-bold space-y-6">
                             <li>
-                                <a href="/" class="muf-link-reset">Marshall University Homepage</a>
+                                <a href="/" class="muf-link-reset inline-flex items-center">
+                                    Marshall University Homepage 
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-1">
+                                        <path d="M2.5 2.5V17.5H17.5V10H15.8333V15.8333H4.16667V4.16667H10V2.5H2.5ZM11.6667 2.5V4.16667H14.6549L6.91081 11.9108L8.08919 13.0892L15.8333 5.34505V8.33333H17.5V2.5H11.6667Z" fill="white" fill-opacity="0.45"></path>
+                                    </svg>
+                                </a>
                             </li>
                             <li>
                                 <a href="/" class="muf-link-reset">Brad D. Smith Foundation Hall</a>
@@ -631,7 +638,7 @@
 
                     </div>
 
-                    <div class="md:pt-20 md:flex md:items-end">
+                    <div class="md:pt-20 md:flex md:items-end md:justify-end">
                         <div class="flex items-center justify-center space-x-8 text-white">
                             <a href="" class="muf-link-reset hover:text-green hover:duration-300">
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -674,14 +681,16 @@
         <!-- Start Desktop Search on all pages -->
         <form id="muf-search-desktop">
             <div class="extra-extra-skinny-container">
-                <button id="muf-search-trigger-close" class="text-green float-right">
-                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.29297 5.20703L4.70703 3.79297L12 11.0859L19.293 3.79297L20.707 5.20703L4.70703 21.207L3.29297 19.793L10.5859 12.5L3.29297 5.20703Z" fill="#00AC3E"></path>
-                        <path d="M19.293 21.207L13 14.9141L14.4141 13.5L20.707 19.793L19.293 21.207Z" class="fill-current"></path>
-                    </svg>
-                    <span class="sr-only">Close Search</span>
-                </button>
-                <label for="muf-search-box-desktop">Search the site</label>
+                <div class="flex justify-between items-center">
+                    <label for="muf-search-box-desktop">Search the site</label>
+                    <button id="muf-search-trigger-close" class="text-green hover:text-black">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.29297 5.20703L4.70703 3.79297L12 11.0859L19.293 3.79297L20.707 5.20703L4.70703 21.207L3.29297 19.793L10.5859 12.5L3.29297 5.20703Z" class="fill-current"></path>
+                            <path d="M19.293 21.207L13 14.9141L14.4141 13.5L20.707 19.793L19.293 21.207Z" class="fill-current"></path>
+                        </svg>
+                        <span class="sr-only">Close Search</span>
+                    </button>
+                </div>
                 <div class="relative">
                     <input type="text" name="muf-search" id="muf-search-box-desktop" class="w-full rounded-full bg-white border-none text-lg font-sans pl-8" placeholder="Start your search">
                     <button class="muf-search-button">

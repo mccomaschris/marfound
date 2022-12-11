@@ -1,14 +1,14 @@
 
 .muf-hero {
 	min-height: 460px;
-	max-height: 888px;
+	max-height: 800px;
 
 	&-shade {
 		@apply w-full h-full absolute top-0;
 		background: linear-gradient(0deg, rgba(240, 250, 243, 0.96), rgba(240, 250, 243, 0.96));
 
 		.hero-has-media & {
-			background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 40.71%, rgba(0, 0, 0, 0) 63.75%);
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 48%, rgba(0, 0, 0, 0) 63.75%);
 
 			@screen md {
 				background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 39.93%, rgba(0, 0, 0, 0) 63.33%);
@@ -22,6 +22,7 @@
 
 	@screen md {
 		min-height: 600px;
+		max-height: calc(100vh - 140px);
 	}
 
 	h1 {
@@ -37,6 +38,6 @@
 	}
 
 	&-overlay {
-		@apply bottom-0 pb-4 md:pb-16;
+		@apply bottom-0 pb-8 md:pb-16;
 	}
 }

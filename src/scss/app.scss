@@ -19,6 +19,7 @@
 @import 'containers.scss';
 @import 'events.scss';
 @import 'feature.scss';
+@import 'images.scss';
 @import 'maps.scss';
 @import 'stats.scss';
 @import 'tabs.scss';
@@ -40,7 +41,6 @@
 
     h1 {     
         font-style: normal;
-        font-weight: 375;
         font-size: 30px;
         line-height: 36px;
         overflow-wrap: break-word;
@@ -53,8 +53,7 @@
         }
     }
 
-    h2 { 
-        font-weight: 375;
+    h2, .like-h2, .md\:like-h2 { 
         font-size: 26px;
         line-height: 32px;
 
@@ -74,7 +73,15 @@
         }
     }
 
-    h4 { // Needs to be Heavy
+    .md\:like-h3 {
+
+        @screen md {
+            font-size: 26px;
+            line-height: 32px;
+        }
+    }
+
+    h4, .like-h4, .md\:like-h4 { // Needs to be Heavy
         font-size: 18px;
         line-height: 24px;
 

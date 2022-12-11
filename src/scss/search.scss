@@ -5,11 +5,11 @@
 	@include muf-transition();
 
 	&:focus {
-		@apply ring-green pl-4;
+		@apply ring-green;
 
 		+ .muf-search-button {
 			@apply bg-green text-white;
-			left: calc(100% - 42px);
+			
 
 			&:hover {
 				@include muf-transition();
@@ -20,7 +20,8 @@
 }
 
 .muf-search-button {
-	@apply text-gray-300 absolute left-0 rounded-full p-2;
+	@apply text-gray-300 absolute rounded-full p-2;
+	left: calc(100% - 42px);
 	@include muf-transition();
 
 	&:focus {
@@ -47,20 +48,19 @@
 
 	label {
 		@apply text-2xl font-serif block mb-4;
-		padding-left: 2rem;
 	}
 
 	#muf-search-box-desktop {
-		padding: 0.75em 3em;
+		padding: 0.75em;
 		line-height: 22px;
+		left: calc(100% - 60px);
 		@include muf-transition();
 
 		&:focus {
-			@apply ring-green pl-4;
+			@apply ring-gray-300 ring-2 pl-4;
 
 			+ .muf-search-button {
 				@apply bg-green text-white;
-				left: calc(100% - 60px);
 
 				&:hover {
 					@include muf-transition();
@@ -72,5 +72,6 @@
 
 	.muf-search-button {
 		padding: 1rem;
+		left: calc(100% - 60px);
 	}
 }

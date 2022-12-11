@@ -8,7 +8,7 @@
 }
 
 #muf-header {
-	@apply bg-white;
+	@apply bg-white py-1;
 
 	@screen md {
 		@apply border-green border-t-4 py-4;

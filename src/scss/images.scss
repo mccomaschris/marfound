@@ -1,0 +1,10 @@
+
+.muf-hover-border {
+	
+	@apply border-transparent border-4;
+	@include muf-transition();
+
+	&:hover {
+		@apply border-green;
+	}	
+}

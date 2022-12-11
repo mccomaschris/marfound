@@ -1,7 +1,8 @@
 
 .muf-button {
-	@apply rounded-full bg-green border-2 border-green text-white no-underline uppercase px-6 pb-3 pt-4 inline-flex items-center text-center leading-none font-bold font-sans justify-center;
+	@apply rounded-full bg-green border-2 border-green text-white text-left text-smed no-underline uppercase px-6 pb-3 pt-4 inline-flex items-center text-center leading-none font-bold font-sans justify-center;
 	@include muf-transition();
+	letter-spacing: 0.02em;
 
 	&:hover {
 		@apply bg-green-dark no-underline border-green-dark;
@@ -23,6 +24,17 @@
 .muf-button--white {
 	@apply bg-white text-green border-white;
 
+	&:hover {
+		@apply bg-green-dark text-white border-green-dark;
+	}
+
+	&.muf-border-green {
+		@apply border-green;
+	}
+}
+
+.muf-button--transparent {
+	@apply bg-transparent text-green border-transparent;
 
 	&:hover {
 		@apply bg-green-dark text-white border-green-dark;

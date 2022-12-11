@@ -2,12 +2,12 @@
 .muf-event {
 
 	&-section-head {
-		@apply bg-green-light py-10 text-mini-lg flex items-center mt-16 md:mt-24;
+		@apply bg-green-light py-7 text-mini-lg flex items-center mt-16 md:mt-24;
 		margin-right: 1rem;
 		padding-left: 1rem;
 
 		h3 {
-			@apply text-mini-lg ml-2;
+			@apply text-mini-lg ml-4;
 
 			@screen md {
 				@apply text-xl;

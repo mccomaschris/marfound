@@ -34,10 +34,12 @@ let body = document.body
 
 let menuOpenButton = document.getElementById('muf-menu-trigger-open')
 let menuCloseButton = document.getElementById('muf-menu-trigger-close')
+let mainContent = document.getElementById('muf-maincontent')
 
 menuOpenButton.addEventListener('click', openMenu, false)
 
 menuCloseButton.addEventListener('click', closeMenu, false)
+//maincontent.addEventListener('click', closeMenu, false)
 
 function openMenu(event) {
 	body.classList.add("show-menu")

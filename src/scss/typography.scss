@@ -44,6 +44,16 @@
             //border-color: rgba(255, 255, 255, 0.25); // white
         }
     }
+
+    &.deco-rule-med {
+
+        &:after {
+            content: "";
+            width: 40px;
+            margin: 8px 0;
+            display: block;
+        }
+    }
 }
 
 .muf-dark .muf-hero .deco-rule, .deco-rule--white {

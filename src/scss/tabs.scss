@@ -6,7 +6,7 @@
 	}
 
 	&-button {
-		@apply rounded-full no-underline border-charcoal/[0.10] border-2 uppercase px-6 pb-4 pt-5 inline-flex items-center text-center leading-none font-bold font-sans justify-center whitespace-nowrap;
+		@apply rounded-full no-underline border-charcoal/[0.10] border-2 uppercase px-6 pb-3 pt-4 inline-flex items-center text-center leading-none font-bold font-sans justify-center whitespace-nowrap;
 		@include muf-transition();
 
 		&:hover {
@@ -36,6 +36,10 @@
 
 	&-panel {
 		@apply bg-charcoal/[0.05] p-4 md:p-6 w-full text-sm font-sans;
+
+		h2, h3, h4 {
+			@apply font-serif mb-4;
+		}
 	}
 }
 

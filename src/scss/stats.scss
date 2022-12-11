@@ -9,12 +9,13 @@
 	}
 
 	&-metric {
-		@apply text-3xl lg:text-4xl text-green;
+		@apply text-2xl md:text-3xl lg:text-4xl text-green;
 	}
 
 	&-context {
 		@apply text-sm uppercase font-bold;
 		max-width: 275px;
+		line-height: 22px;
 	}
 }
 
