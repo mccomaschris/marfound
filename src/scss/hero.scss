@@ -25,6 +25,11 @@
 		max-height: calc(100vh - 140px);
 	}
 
+	@screen lg {
+		min-height: 600px;
+		max-height: calc(100vh - 320px);
+	}
+
 	h1 {
 		@apply font-bold text-charcoal;
 		max-width: 950px;

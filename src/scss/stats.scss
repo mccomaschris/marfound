@@ -29,7 +29,8 @@
 
 		.muf-carousel-item {
 			@apply px-6 m-0 py-2;
-			max-width: 100%;
+			max-width: initial;
+			width: auto;
 
 			&:first-of-type {
 				@apply border-dotted border-r-4 row-span-2 pr-3 py-0;
