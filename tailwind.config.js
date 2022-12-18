@@ -11,7 +11,7 @@ module.exports = {
   ],
   safelist: [
     {
-        pattern: /^text\-((?:white)|(?:gray)|(?:gray\-\d)|(?:greed)|(?:blue))/,
+        pattern: /^text\-((?:white)|(?:gray)|(?:gray\-\d)|(?:green)|(?:blue))/,
     },
     {
         pattern: /^bg\-((?:green))/,
