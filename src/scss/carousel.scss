@@ -22,6 +22,28 @@
 		}
 	}
 
+	&:not(.muf-alumni-stats-wrapper) {
+
+		.muf-carousel-item {
+
+			@screen smed {
+				max-width: 35%;
+			}
+
+			@screen md {
+				max-wdith: 35%;
+			}
+
+			@screen lg {
+				max-width: 33%;
+			}
+
+			@screen xl {
+				max-width: 27%;
+			}
+		}
+	}
+
 	&.muf-news-wrapper {
 		@apply flex flex-col gap-8 my-12;
 
